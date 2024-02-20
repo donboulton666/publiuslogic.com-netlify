@@ -1,7 +1,7 @@
 import { Link } from 'gatsby'
 import * as React from 'react'
 
-import { connectStateResults, Highlight, Hits, Index, Snippet, PoweredBy } from 'react-instantsearch'
+import { connectStateResults, Highlight, Hits, Index, Snippet, PoweredBy } from 'react-instantsearch-dom'
 
 const HitCount = connectStateResults(({ searchResults }) => {
   const hitCount = searchResults && searchResults.nbHits
