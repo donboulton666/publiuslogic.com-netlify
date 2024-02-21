@@ -32,15 +32,15 @@
   "peerDependencies": {
     "@mdx-js/mdx": "^1.6.22",
     "@mdx-js/react": "^1.6.22",
-    "gatsby": "^5.13.3",
+    "gatsby": "^5.12.5",
     "mdx-embed": "*",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
   "devDependencies": {
-    "@types/node": "^20.11.19",
-    "@types/react": "^18.2.57",
-    "prettier": "^3.2.5",
-    "typescript": "^5.3.3"
+    "@types/node": "^20.5.8",
+    "@types/react": "^18.2.24",
+    "prettier": "^3.0.3",
+    "typescript": "^5.2.2"
   }
 }
