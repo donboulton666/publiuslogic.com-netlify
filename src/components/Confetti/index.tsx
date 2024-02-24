@@ -2,10 +2,10 @@
 
 import * as React from 'react'
 import { useCallback } from 'react'
-import Particles from '@tsparticles/react'
-import type { Container, Engine } from '@tsparticles/engine'
+import Particles from 'react-tsparticles'
+import type { Container, Engine } from 'tsparticles-engine'
 import { loadFull } from 'tsparticles'
-import { loadConfettiPreset } from '@tsparticles/preset-confetti'
+import { loadConfettiPreset } from 'tsparticles-preset-confetti'
 
 const options = {
   fpsLimit: 60,

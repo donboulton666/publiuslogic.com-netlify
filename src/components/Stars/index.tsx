@@ -1,11 +1,11 @@
 import * as React from 'react'
-import Particles from '@tsparticles/react'
-import { loadColorUpdater } from '@tsparticles/updater-color'
-import { loadCircleShape } from '@tsparticles/shape-circle'
-import { loadBaseMover } from '@tsparticles/move-base'
-import { loadSizeUpdater } from '@tsparticles/updater-size'
-import { loadOpacityUpdater } from '@tsparticles/updater-opacity'
-import { loadOutModesUpdater } from '@tsparticles/updater-out-modes'
+import Particles from 'react-tsparticles'
+import { loadColorUpdater } from 'tsparticles-updater-color'
+import { loadCircleShape } from 'tsparticles-shape-circle'
+import { loadBaseMover } from 'tsparticles-move-base'
+import { loadSizeUpdater } from 'tsparticles-updater-size'
+import { loadOpacityUpdater } from 'tsparticles-updater-opacity'
+import { loadOutModesUpdater } from 'tsparticles-updater-out-modes'
 
 import './styles.css'
 
