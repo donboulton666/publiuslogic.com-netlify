@@ -40,6 +40,7 @@ const logicNavigation = [
     href: '/blog/earths-magnetic-flux',
     current: false,
   },
+  { name: 'Arcata CA', href: '/blog/arcata', current: false },
   { name: 'EMF EMP', href: '/blog/emf-emp', current: false },
   { name: 'Intelligence Failure', href: '/blog/intelligence-failure', current: false },
   { name: 'NATO Disarmed', href: '/blog/nato-disarmed', current: false },
