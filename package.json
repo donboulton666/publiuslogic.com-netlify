@@ -181,9 +181,9 @@
     "deploy": "gatsby build && gh-pages -d public -b main"
   },
   "engines": {
-    "node": ">=18.19.1"
+    "node": ">=20.12.2"
   },
   "AWS_LAMBDA_JS_RUNTIME": {
-    "node": ">=18.19.1"
+    "node": ">=20.12.2"
   }
 }
