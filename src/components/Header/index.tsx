@@ -186,23 +186,6 @@ export default function Header() {
               ))}
             </SubMenu>
             <MenuDivider />
-            <MenuHeader>Trinity</MenuHeader>
-            <SubMenu label="Of Angels">
-              {angieNavigation.map((item) => (
-                <Fragment key={item.name}>
-                  <MenuItem>
-                    <FocusableItem>
-                      {({ ref }) => (
-                        <Link ref={ref} aria-label={item.name} key={item.name} to={item.href}>
-                          {item.name}
-                        </Link>
-                      )}
-                    </FocusableItem>
-                  </MenuItem>
-                </Fragment>
-              ))}
-            </SubMenu>
-            <MenuDivider />
             <MenuItem>
               <a href="https://bibwoe.com/posts/enoch-preface" target="_blank" aria-label="Enoch">
                 <span className="flex items-center">
