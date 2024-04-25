@@ -32,16 +32,16 @@ const godNavigation = [
 ]
 
 const logicNavigation = [
+  { name: 'Arcata CA', href: '/blog/arcata', current: false },
   { name: 'Bullshit', href: '/blog/bullshit', current: false },
-  { name: 'Government', href: '/blog/government', current: false },
-  { name: 'Homeless', href: '/blog/homeless', current: false },
   {
     name: 'Earth Magnetism',
     href: '/blog/earths-magnetic-flux',
     current: false,
   },
-  { name: 'Arcata CA', href: '/blog/arcata', current: false },
   { name: 'EMF EMP', href: '/blog/emf-emp', current: false },
+  { name: 'Government', href: '/blog/government', current: false },
+  { name: 'Homeless', href: '/blog/homeless', current: false },
   { name: 'Intelligence Failure', href: '/blog/intelligence-failure', current: false },
   { name: 'NATO Disarmed', href: '/blog/nato-disarmed', current: false },
   { name: 'Philosophy', href: '/blog/philosophy', current: false },

@@ -13,7 +13,8 @@ const fullConfig = resolveConfig(tailwindConfig)
 const config: GatsbyConfig = {
   trailingSlash: "never",
   adapter: adapter({
-    excludeDatastoreFromEngineFunction: true,
+    excludeDatastoreFromEngineFunction: false,
+    imageCDN: false,
   }),
   headers: [
     {
