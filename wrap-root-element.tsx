@@ -32,7 +32,6 @@ import LeftText from './src/components/LeftText'
 import ColumnGridTwo from './src/components/ColumnGridTwo'
 import ColumnGridThree from './src/components/ColumnGridThree'
 import VideoWrapper from './src/components/VideoWrapper'
-import Confetti from './src/components/Confetti'
 import HoverMenu from './src/components/HoverMenu'
 import ImageColWrapperPage from './src/components/ImageColWrapper'
 import IframeWrapperLarge from './src/components/IframeWrapperLarge'
@@ -70,7 +69,6 @@ const components = {
   ColumnGridTwo: ColumnGridTwo,
   ColumnGridThree: ColumnGridThree,
   VideoWrapper: VideoWrapper,
-  Confetti: Confetti,
   Love: Love,
   HoverMenu: HoverMenu,
   ImageColWrapperPage: ImageColWrapperPage,

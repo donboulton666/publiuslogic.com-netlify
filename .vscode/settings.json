@@ -8,5 +8,9 @@
   "editor.fontFamily": "Consolas, 'Courier New', monospace",
   "editor.fontLigatures": true, // Does this have a noticeable effect?
 
-  "editor.lineNumbers": "on"
+  "editor.lineNumbers": "on",
+  "cSpell.words": [
+    "crossorigin",
+    "Publius"
+  ]
 }

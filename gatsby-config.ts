@@ -27,8 +27,6 @@ const config: GatsbyConfig = {
         },
       ],
     },
-  ],
-  headers: [
     {
       source: `*`,
       headers: [

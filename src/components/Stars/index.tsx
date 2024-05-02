@@ -1,63 +1,103 @@
 import * as React from 'react'
-import Particles from 'react-tsparticles'
-import { loadColorUpdater } from 'tsparticles-updater-color'
-import { loadCircleShape } from 'tsparticles-shape-circle'
-import { loadBaseMover } from 'tsparticles-move-base'
-import { loadSizeUpdater } from 'tsparticles-updater-size'
-import { loadOpacityUpdater } from 'tsparticles-updater-opacity'
-import { loadOutModesUpdater } from 'tsparticles-updater-out-modes'
-
+import { useEffect, useMemo, useState } from "react";
+import Particles, { initParticlesEngine } from "@tsparticles/react";
+import {
+  type Container,
+  type ISourceOptions,
+  MoveDirection,
+  OutModes,
+} from "@tsparticles/engine";
+import { loadSlim } from "@tsparticles/slim"
+import { loadStarsPreset } from '@tsparticles/preset-stars'
 import './styles.css'
 
 export default function Stars() {
-  async function particlesInit(engine) {
-    await loadColorUpdater(engine)
-    await loadCircleShape(engine)
-    await loadBaseMover(engine)
-    await loadSizeUpdater(engine)
-    await loadOpacityUpdater(engine)
-    await loadOutModesUpdater(engine)
-  }
+  const [init, setInit] = useState(false);
+  useEffect(() => {
+    initParticlesEngine(async (engine) => {
+      await loadSlim(engine);
+      await loadStarsPreset(engine);
+    }).then(() => {
+      setInit(true);
+    });
+  }, []);
 
+  const particlesLoaded = async (container?: Container): Promise<void> => {
+    console.log(container);
+  };
+
+  const options: ISourceOptions = useMemo(
+    () => ({
+      background: {
+        color: {
+          value: "transparent",
+        },
+      },
+      fpsLimit: 120,
+      interactivity: {
+        events: {
+          onClick: {
+            enable: true,
+            mode: "push",
+          },
+          onHover: {
+            enable: true,
+            mode: "repulse",
+          },
+        },
+        modes: {
+          push: {
+            quantity: 4,
+          },
+          repulse: {
+            distance: 200,
+            duration: 0.4,
+          },
+        },
+      },
+      particles: {
+        color: {
+          value: ['#FF5A86', '#953AFE', '#FFC326', '#46C0FF'],
+        },
+        move: {
+          direction: 'none',
+          enable: true,
+          outModes: {
+            default: 'out',
+          },
+          random: true,
+          speed: 0.1,
+          straight: false,
+        },
+        number: { density: { enable: true, area: 800 }, value: 80 },
+        opacity: {
+          animation: {
+            enable: true,
+            speed: 1,
+            sync: false,
+          },
+          value: { min: 0, max: 1 },
+        },
+        shape: {
+          type: 'circle',
+        },
+        size: {
+          value: { min: 1, max: 3 },
+        },
+      },
+      preset: "stars",
+    }),
+    [],
+  );
+
+  if (init) {
   return (
     <Particles
-      init={particlesInit}
-      options={{
-        fpsLimit: 120,
-        background: {
-          color: 'transparent',
-        },
-        particles: {
-          color: {
-            value: ['#FF5A86', '#953AFE', '#FFC326', '#46C0FF'],
-          },
-          move: {
-            direction: 'none',
-            enable: true,
-            outModes: {
-              default: 'out',
-            },
-            random: true,
-            speed: 0.1,
-            straight: false,
-          },
-          number: { density: { enable: true, area: 800 }, value: 80 },
-          opacity: {
-            animation: {
-              enable: true,
-              speed: 1,
-              sync: false,
-            },
-            value: { min: 0, max: 1 },
-          },
-          shape: {
-            type: 'circle',
-          },
-          size: {
-            value: { min: 1, max: 3 },
-          },
-        },
-      }}
+      id="tsparticles"
+      particlesLoaded={particlesLoaded}
+      options={options}
     />
   )
+ }
+  return <></>;
 }
