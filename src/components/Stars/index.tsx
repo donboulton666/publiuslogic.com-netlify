@@ -4,8 +4,6 @@ import Particles, { initParticlesEngine } from "@tsparticles/react";
 import {
   type Container,
   type ISourceOptions,
-  MoveDirection,
-  OutModes,
 } from "@tsparticles/engine";
 import { loadSlim } from "@tsparticles/slim"
 import { loadStarsPreset } from '@tsparticles/preset-stars'
@@ -37,11 +35,11 @@ export default function Stars() {
       interactivity: {
         events: {
           onClick: {
-            enable: true,
+            enable: false,
             mode: "push",
           },
           onHover: {
-            enable: true,
+            enable: false,
             mode: "repulse",
           },
         },
