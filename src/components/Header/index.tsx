@@ -52,6 +52,7 @@ const logicNavigation = [
 
 const angieNavigation = [
   { name: 'Gallery', href: '/gallery', current: false },
+  { name: 'Charlotte', href: '/charlotte-summers', current: false },
   { name: 'Old Enough', href: '/old-enough', current: false },
   { name: 'Angelina', href: '/blog/angelina-jordan', current: false },
   { name: 'Trinity', href: '/blog/trinity-of-angels', current: false },
@@ -185,6 +186,23 @@ export default function Header() {
                 </Fragment>
               ))}
             </SubMenu>
+            <MenuDivider />
+            <MenuHeader>Trinity</MenuHeader>
+            <SubMenu label="Of Angels">
+              {angieNavigation.map((item) => (
+                <Fragment key={item.name}>
+                  <MenuItem>
+                    <FocusableItem>
+                      {({ ref }) => (
+                        <Link ref={ref} aria-label={item.name} key={item.name} to={item.href}>
+                          {item.name}
+                        </Link>
+                      )}
+                    </FocusableItem>
+                  </MenuItem>
+                </Fragment>
+              ))}
+            </SubMenu>            
             <MenuDivider />
             <MenuItem>
               <a href="https://bibwoe.com/posts/enoch-preface" target="_blank" aria-label="Enoch">
