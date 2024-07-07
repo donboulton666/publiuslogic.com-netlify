@@ -8,18 +8,22 @@ date: 2022-10-20
 featuredPost: false
 category: Tech
 embeddedImagesLocal:
-  - '../../../static/img/animated.jpg' 
-tags: 
+  - '../../../static/img/animated.jpg'
+tags:
   - 'Framer'
-  - 'Motion' 
+  - 'Motion'
   - 'Sectionize'
 publicId: videos/angelina_jordan_suspicious_minds
 videoTitle: Angelina Jordan Suspicious Minds
 ---
 
-import { getImage, GatsbyImage } from 'gatsby-plugin-image';
+import { getImage, GatsbyImage } from 'gatsby-plugin-image'
 
-<GatsbyImage alt="about" imgclass="block object-cover object-center w-full h-full rounded-lg" image={getImage(props.localImages[0])} />
+<GatsbyImage
+  alt="about"
+  imgclass="block object-cover object-center w-full h-full rounded-lg"
+  image={getImage(props.localImages[0])}
+/>
 
 ## Sectionize Content
 
@@ -178,13 +182,13 @@ export default Section
 
 <Section>
 
-## FramerFeatures Component 
+## FramerFeatures Component
 
 </Section>
 
 <Section>
 
-`domMax` Calling just the sub Features of FramerMotion when needed. 
+`domMax` Calling just the sub Features of FramerMotion when needed.
 
 As in each component or page: as below
 
@@ -220,4 +224,4 @@ export default domMax
 
 </Section>
 
-<WavyHr className="mt-1 mb-1 text-wine-300" />
+<WavyHr className="mb-1 mt-1 text-wine-300" />

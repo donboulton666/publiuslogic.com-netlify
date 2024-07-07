@@ -203,7 +203,7 @@ export default function Header() {
                   </MenuItem>
                 </Fragment>
               ))}
-            </SubMenu>            
+            </SubMenu>
             <MenuDivider />
             <MenuItem>
               <a href="https://bibwoe.com/posts/enoch-preface" target="_blank" aria-label="Enoch">
@@ -239,7 +239,7 @@ export default function Header() {
         </Menu>
         <div className="flex items-center">
           <Link to="/" aria-label="Home Link">
-            <div className="flex items-center ">
+            <div className="flex items-center">
               <span>
                 <StaticImage
                   className="h-8 w-8"

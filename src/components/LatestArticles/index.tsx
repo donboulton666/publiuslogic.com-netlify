@@ -35,7 +35,7 @@ export default function LatestArticles() {
               </Link>
             </div>
             <div className="mt-6 space-y-12 lg:grid lg:grid-cols-2 lg:gap-x-6 lg:space-y-0 xl:grid-cols-3">
-              <div className="relative mb-4  block rounded-lg p-4 text-slate-200 lg:mb-0 lg:p-0 xl:col-span-2">
+              <div className="relative mb-4 block rounded-lg p-4 text-slate-200 lg:mb-0 lg:p-0 xl:col-span-2">
                 <div className="mb-6">
                   <Link to={`/${post.slug}`}>
                     <span className="sr-only">{post.frontmatter.title}</span>

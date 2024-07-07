@@ -8,21 +8,25 @@ category: Tech
 publicId: videos/angelina_jordan_suspicious_minds
 videoTitle: Angelina Jordan Suspicious Minds
 embeddedImagesLocal:
-  - '../../../static/assets/about.jpg' 
+  - '../../../static/assets/about.jpg'
   - '../../../static/img/speed-test.jpg'
   - '../../../static/img/security-report.jpg'
   - '../../../static/img/site-driven1.png'
   - '../../../static/img/buy-me-a-coffee.jpg'
-tags: 
-  - 'About' 
-  - 'Gatsby' 
+tags:
+  - 'About'
+  - 'Gatsby'
   - 'Starter'
 description: PubliusLogic Purpose and Technologies, A little about the Author and some Internet programming tidbits.
 ---
 
-import { getImage, GatsbyImage } from 'gatsby-plugin-image';
+import { getImage, GatsbyImage } from 'gatsby-plugin-image'
 
-<GatsbyImage alt="about" imgclass="block object-cover object-center w-full h-full rounded-lg" image={getImage(props.localImages[0])} />
+<GatsbyImage
+  alt="about"
+  imgclass="block object-cover object-center w-full h-full rounded-lg"
+  image={getImage(props.localImages[0])}
+/>
 
 ## To Convey My Knowledge
 
@@ -68,7 +72,11 @@ PubliusLogic security is top notch using the latest Content-Security-Policy dire
 
 <ImageColWrapperPage>
 
-<GatsbyImage alt="Content Security Policy" imgclass="object-cover object-center w-full h-full rounded-lg" image={getImage(props.localImages[1])} />
+<GatsbyImage
+  alt="Content Security Policy"
+  imgclass="object-cover object-center w-full h-full rounded-lg"
+  image={getImage(props.localImages[1])}
+/>
 
 </ImageColWrapperPage>
 
@@ -78,7 +86,11 @@ PubliusLogic security is top notch using the latest Content-Security-Policy dire
 
 <ImageColWrapperPage>
 
-<GatsbyImage alt="Headers test Content-Security-Policy" imgclass="object-cover object-center w-full h-full rounded-lg" image={getImage(props.localImages[2])} />
+<GatsbyImage
+  alt="Headers test Content-Security-Policy"
+  imgclass="object-cover object-center w-full h-full rounded-lg"
+  image={getImage(props.localImages[2])}
+/>
 
 </ImageColWrapperPage>
 
@@ -97,7 +109,7 @@ Went from sass to styled components now using Tailwind CSS and happy about its e
 <Section>
 
 🍸 This website is built as static HTML with React component-modular Docker Container builds, using React components
-with GraphQL, Built with WebPack. Including a user data, todo's backend. The data structure is using a second github repo for json data on the fly with OctoCat Rest and a GitHub App for Auth.
+with GraphQL, Built with WebPack.
 
 </Section>
 
@@ -105,7 +117,11 @@ with GraphQL, Built with WebPack. Including a user data, todo's backend. The dat
 
 <ImageColWrapperPage>
 
-<GatsbyImage alt="Site Structure" imgclass="block object-cover object-center w-full h-full rounded-lg" image={getImage(props.localImages[3])} />
+<GatsbyImage
+  alt="Site Structure"
+  imgclass="block object-cover object-center w-full h-full rounded-lg"
+  image={getImage(props.localImages[3])}
+/>
 
 </ImageColWrapperPage>
 
@@ -147,7 +163,7 @@ methods such as OAuth 2 for ultimate security.
 
 ## Authentication
 
-Github and Google OAuth v2 with `Supabase`
+None
 
 ## Features
 
@@ -228,10 +244,14 @@ THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES WITH RE
 
 <ImageColWrapperPage>
 
-<GatsbyImage alt="Buy Me A Coffee" imgclass="object-cover w-full h-full object-center rounded-lg" image={getImage(props.localImages[4])} />
+<GatsbyImage
+  alt="Buy Me A Coffee"
+  imgclass="object-cover w-full h-full object-center rounded-lg"
+  image={getImage(props.localImages[4])}
+/>
 
 </ImageColWrapperPage>
 
 <Cta />
 
-<WavyHr className="mt-1 mb-1 text-wine-300" />
+<WavyHr className="mb-1 mt-1 text-wine-300" />

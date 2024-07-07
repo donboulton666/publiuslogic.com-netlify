@@ -58,7 +58,7 @@ function Profile(props, ref: ProfileRef) {
                   >
                     https://donwboulton.com
                   </a>
-                  <div className="m-auto my-2 mb-6 max-w-xl  justify-center text-slate-200 hover:text-slate-300">
+                  <div className="m-auto my-2 mb-6 max-w-xl justify-center text-slate-200 hover:text-slate-300">
                     <div className="justify-items-center text-center">
                       Left Hand of Father God since the beginning of time!{' '}
                     </div>

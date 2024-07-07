@@ -74,7 +74,7 @@ const BlogRoll = ({ category, excerpt }: BlogRollProps) => {
                             {post.frontmatter.title}
                           </h2>
                         </Link>
-                        <div className="flex flex-wrap items-center ">
+                        <div className="flex flex-wrap items-center">
                           <span className="mr-3 inline-flex items-center border-r-2 border-wine-300 py-1 pr-3 text-xs leading-none text-slate-900 dark:text-slate-300">
                             <CalendarIcon className="mr-1 h-4 w-4" />
                             {post.frontmatter.date}

@@ -11,7 +11,7 @@ dotenv.config()
 const fullConfig = resolveConfig(tailwindConfig)
 
 const config: GatsbyConfig = {
-  trailingSlash: "never",
+  trailingSlash: 'never',
   adapter: adapter({
     excludeDatastoreFromEngineFunction: false,
     imageCDN: false,
@@ -203,7 +203,7 @@ const config: GatsbyConfig = {
               isIconAfterHeader: true,
               elements: ['h1', 'h2', 'h3', 'h4', 'h5', 'h6'],
             },
-          },          
+          },
           'gatsby-remark-responsive-iframe',
           {
             resolve: 'gatsby-remark-acronyms',

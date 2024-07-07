@@ -53,7 +53,18 @@ function TagPage({ pageContext }, props: TagPageProps, ref: TagPageRef) {
                   </Link>
                 </div>
               </div>
-              <BlogRoll tag={tag} />
+              <BlogRoll
+                tag={tag}
+                title={''}
+                description={''}
+                path={''}
+                author={''}
+                date={''}
+                imageLink={''}
+                tags={[]}
+                categories={[]}
+                excerpt={''}
+              />
             </div>
           </div>
         </PageTransition>

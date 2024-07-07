@@ -83,7 +83,7 @@ Using react spring for menu animations from desktop to mobile, image gallery use
 
 ## Just Having Fun
 
-  🍸 This website is built as static HTML with React component-modular Docker Container builds, using React components with GraphQL, Built with WebPack. Including a user data, todo's backend. The data structure is using a second github repo for json data on the fly with OctoCat Rest and a GitHub App for Auth.
+🍸 This website is built as static HTML with React component-modular Docker Container builds, using React components with GraphQL, Built with WebPack. Including a user data, todo's backend. The data structure is using a second github repo for json data on the fly with OctoCat Rest and a GitHub App for Auth.
 
 Served on Netlify via a continuous deployment (CD) workflow. Pull requests are automatically built into preview apps, while commits to the master branch trigger the production build and deploy onto Netlify’s CDN edge node infrastructure. Since the whole site is just a bunch of static files copied onto multiple CDN nodes around the world, time to first byte (TTFB) is consistently fast at around 1ms to 2ms. Instant Notifications through my Slack Bots or GMail and phone notifications using Netlify Functions for my Mansbooks.com publiuslogic.com workspace.
 

@@ -7,10 +7,7 @@ import { AnimatePresence } from 'framer-motion'
 
 export function wrapPageElement({ element }) {
   return (
-    <AnimatePresence
-      mode="wait" 
-      initial={false}
-    >
+    <AnimatePresence mode="wait" initial={false}>
       {element}
     </AnimatePresence>
   )

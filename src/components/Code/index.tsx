@@ -4,7 +4,7 @@ import * as React from 'react'
 import { useState, useRef, useEffect } from 'react'
 import { useMDXScope } from 'gatsby-plugin-mdx/context'
 import { Disclosure } from '@headlessui/react'
-import { Highlight, themes } from "prism-react-renderer"
+import { Highlight, themes } from 'prism-react-renderer'
 import { LiveProvider, LiveEditor, LiveError, LivePreview } from 'react-live'
 import { LazyMotion, m, useMotionValue, useTransform } from 'framer-motion'
 import dracula from 'prism-react-renderer/themes/dracula'
