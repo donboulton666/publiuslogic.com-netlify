@@ -1,7 +1,6 @@
 import * as React from 'react'
 import { wrapRootElement as wrap } from './wrap-root-element'
 import { AnimatePresence } from 'framer-motion'
-import { Partytown } from '@builder.io/partytown/react'
 
 export function wrapPageElement({ element }) {
   return (
@@ -13,17 +12,18 @@ export function wrapPageElement({ element }) {
 export const wrapRootElement = wrap
 
 const ORIGIN = 'https://www.googletagmanager.com'
-const GATSBY_GA_MEASUREMENT_ID = 'GTM-WLCMLLP'
+const GATSBY_GA_MEASUREMENT_ID = 'G-LGV204F0PT'
 
 export function onRenderBody({ setHtmlAttributes, setHeadComponents, setPreBodyComponents }) {
   if (process.env.NODE_ENV !== 'production' && process.env.NODE_ENV !== 'test') return null
   setHtmlAttributes({ lang: 'en' })
   setHeadComponents([
-    <Partytown key="partytown" forward={['gtag']} />,
-    <script key="google-analytics" type="text/partytown" src={`${ORIGIN}/gtag/js?id=${GATSBY_GA_MEASUREMENT_ID}`} />,
+    <script 
+      key="gtag"
+      src={`${ORIGIN}/gtag/js?id=${GATSBY_GA_MEASUREMENT_ID}`} 
+    />,
     <script
       key="gtag"
-      type="text/partytown"
       dangerouslySetInnerHTML={{
         __html: `window.dataLayer = window.dataLayer || [];
         window.gtag = function gtag(){ window.dataLayer.push(arguments);}
