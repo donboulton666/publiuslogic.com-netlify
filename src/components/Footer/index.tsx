@@ -3,7 +3,7 @@ import { StaticImage } from 'gatsby-plugin-image'
 import { Link } from 'gatsby'
 import ColumnGridTwo from '@/components/ColumnGridTwo'
 import Subscriptions from '@/components/Subscriptions'
-import { OutboundLink } from "gatsby-plugin-google-analytics"
+import { OutboundLink } from 'gatsby-plugin-google-analytics'
 
 export default function Footer() {
   return (
@@ -299,7 +299,7 @@ export default function Footer() {
                       </Link>
                     </li>
                     <li>
-                    <OutboundLink
+                      <OutboundLink
                         className="block pb-2 text-lg font-semibold text-slate-300 hover:text-wine-300"
                         rel="noopener noreferrer"
                         target="_blank"
@@ -310,7 +310,7 @@ export default function Footer() {
                       </OutboundLink>
                     </li>
                     <li>
-                    <OutboundLink
+                      <OutboundLink
                         className="block pb-2 text-lg font-semibold text-slate-300 hover:text-wine-300"
                         rel="noopener noreferrer"
                         target="_blank"

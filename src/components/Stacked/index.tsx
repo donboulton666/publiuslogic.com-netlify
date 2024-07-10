@@ -3,6 +3,7 @@ import { StaticImage } from 'gatsby-plugin-image'
 import clsx from 'clsx'
 import { Disclosure, Menu, Transition } from '@headlessui/react'
 import { MusicalNoteIcon } from '@heroicons/react/24/outline'
+import { OutboundLink } from 'gatsby-plugin-google-analytics'
 
 const Stacked = () => {
   return (
@@ -64,7 +65,7 @@ const Stacked = () => {
           <Menu.Items className="ring-black absolute right-0 mt-3 w-48 origin-top-right rounded-md bg-slate-900 py-1 text-slate-200 opacity-75 shadow-lg ring-1 ring-opacity-5 hover:opacity-100 focus:outline-none">
             <Menu.Item>
               {({ active }) => (
-                <a
+                <OutboundLink
                   aria-label="Login"
                   to="/login"
                   className={clsx(
@@ -80,12 +81,12 @@ const Stacked = () => {
                     />
                     <span>Old Enough</span>
                   </span>
-                </a>
+                </OutboundLink>
               )}
             </Menu.Item>
             <Menu.Item>
               {({ active }) => (
-                <a
+                <OutboundLink
                   aria-label="Old Enough"
                   to="/old-enough"
                   className={clsx(
@@ -97,12 +98,12 @@ const Stacked = () => {
                     <MusicalNoteIcon className="block h-8 w-8 pr-2 text-purple-500" aria-hidden="true" />
                     <span>Profile</span>
                   </span>
-                </a>
+                </OutboundLink>
               )}
             </Menu.Item>
             <Menu.Item>
               {({ active }) => (
-                <a
+                <OutboundLink
                   to="/profile"
                   aria-label="Profile Button"
                   className={clsx(
@@ -114,7 +115,7 @@ const Stacked = () => {
                     <MusicalNoteIcon className="block h-8 w-8 pr-2 text-purple-500" aria-hidden="true" />
                     <span>Profile</span>
                   </span>
-                </a>
+                </OutboundLink>
               )}
             </Menu.Item>
           </Menu.Items>

@@ -8,7 +8,7 @@ import PageTransition from '@/components/PageTransition'
 import Seo from '@/components/Seo'
 import Image from '../../static/svg/undraw/undraw_super_thank_you_re_f8bo.svg'
 import OGImage from '../../static/images/undraw/undraw_Super_thank_you_re_f8bo.png'
-import WavyHr from '@/components/WavyHr'
+import { OutboundLink } from 'gatsby-plugin-google-analytics'
 import PageHero from '@/components/PageHero'
 
 const ogimage = {
@@ -46,7 +46,7 @@ function Thanks(props, ref: ThanksRef) {
                   <div>Thank You for your Submission!</div>
                 </div>
                 <div className="flex justify-center text-2xl">
-                  <a href="https://www.buymeacoffee.com/donaldboulton/w/3913" alt="Buy Me A Coffee">
+                  <OutboundLink href="https://www.buymeacoffee.com/donaldboulton/w/3913" alt="Buy Me A Coffee">
                     <StaticImage
                       className="m-auto mx-auto mb-3 h-16 w-48 rounded-md"
                       formats={['auto', 'webp']}
@@ -56,7 +56,7 @@ function Thanks(props, ref: ThanksRef) {
                       area-label="Buy me a coffee"
                       loading="Buy me a coffee"
                     />
-                  </a>
+                  </OutboundLink>
                 </div>
                 <div className="mb-20">
                   <hr className="mx-auto w-full text-wine-600" />

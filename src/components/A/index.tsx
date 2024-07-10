@@ -1,6 +1,7 @@
 import * as React from 'react'
 import { ReactNode } from 'react'
 import { Link } from 'gatsby'
+import { OutboundLink } from 'gatsby-plugin-google-analytics'
 
 interface AProps {
   href: string
@@ -12,7 +13,7 @@ interface AProps {
 export default function A({ href, external = false, className, children }: AProps) {
   if (external) {
     return (
-      <a
+      <OutboundLink
         key={href}
         href={href}
         className={`text-slate-200 hover:text-wine-300 dark:text-slate-200 ${className}`}
@@ -21,7 +22,7 @@ export default function A({ href, external = false, className, children }: AProp
         area-label="Social Link"
       >
         {children}
-      </a>
+      </OutboundLink>
     )
   } else {
     return (

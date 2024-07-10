@@ -2,6 +2,7 @@ import * as React from 'react'
 import { StaticImage } from 'gatsby-plugin-image'
 import { useNetlifyForm, NetlifyFormProvider, NetlifyFormComponent, Honeypot, Recaptcha } from 'react-netlify-forms'
 import { useForm, Resolver } from 'react-hook-form'
+import { OutboundLink } from 'gatsby-plugin-google-analytics'
 
 type FormValues = {
   firstName: string
@@ -92,7 +93,6 @@ export default function ContactForm() {
                       <input
                         className="mb-3 block w-full appearance-none rounded border-slate-300 bg-slate-300 p-2.5 px-4 py-3 pl-14 leading-tight text-slate-900 opacity-70 focus:border-wine-300 focus:outline-none focus:ring-slate-500 dark:border-slate-900 dark:bg-slate-950 dark:text-slate-200 sm:text-sm"
                         id="firstName"
-                        name="firstName"
                         type="text"
                         placeholder="First name"
                         {...register('firstName', {
@@ -130,7 +130,6 @@ export default function ContactForm() {
                       <input
                         className="block w-full appearance-none rounded border-slate-300 bg-slate-300 p-2.5 px-4 py-3 pl-14 leading-tight text-slate-900 opacity-70 focus:border-wine-300 focus:outline-none focus:ring-slate-500 dark:border-slate-900 dark:bg-slate-950 dark:text-slate-200 sm:text-sm"
                         id="lastName"
-                        name="lastName"
                         type="text"
                         placeholder="Last name"
                         {...register('lastName', {
@@ -169,7 +168,6 @@ export default function ContactForm() {
                       </div>
                       <input
                         type="text"
-                        name="userName"
                         id="userName"
                         autoComplete="off"
                         placeholder="User Name"
@@ -204,7 +202,6 @@ export default function ContactForm() {
                       </div>
                       <input
                         type="text"
-                        name="email"
                         id="email"
                         autoComplete="on"
                         placeholder="Email"
@@ -246,7 +243,6 @@ export default function ContactForm() {
                       </div>
                       <input
                         type="tel"
-                        name="phone"
                         id="phone"
                         autoComplete="on"
                         placeholder="Phone Number"
@@ -291,7 +287,6 @@ export default function ContactForm() {
                       </div>
                       <input
                         type="text"
-                        name="subject"
                         id="subject"
                         placeholder="Subject"
                         className="mt-1 block w-full rounded-md border-slate-800 bg-slate-300 p-2.5 px-4 py-3 pl-14 leading-tight text-slate-900 opacity-70 shadow-sm focus:border-wine-300 focus:ring-slate-500 dark:bg-slate-950 dark:text-slate-700 sm:text-sm"
@@ -328,10 +323,8 @@ export default function ContactForm() {
                       </div>
                       <textarea
                         id="message"
-                        name="message"
                         className="mt-1 block w-full rounded-md border-slate-300 bg-slate-300 p-2.5 pl-14 text-slate-900 caret-blue-500 opacity-70 shadow-sm focus:border-wine-300 focus:caret-indigo-500 focus:ring-slate-500 dark:border-slate-900 dark:bg-slate-950 dark:text-slate-200 sm:text-sm"
                         rows={5}
-                        name="text"
                         {...register('message', {
                           required: true,
                         })}
@@ -367,7 +360,7 @@ export default function ContactForm() {
               </div>
               <div className="float-right mr-8 mt-4">
                 <span className="md:ml-10">
-                  <a
+                  <OutboundLink
                     href="https://netlify.com/"
                     className="inline-flex"
                     target="_blank"
@@ -399,10 +392,10 @@ export default function ContactForm() {
                       />
                     </svg>
                     <span className="ml-1 mt-2 text-slate-900 dark:text-slate-300">Netlify</span>
-                  </a>
+                  </OutboundLink>
                 </span>
                 <span className="ml-2">
-                  <a
+                  <OutboundLink
                     href="https://react-hook-form.com/"
                     className="inline-flex"
                     target="_blank"
@@ -420,7 +413,7 @@ export default function ContactForm() {
                       loading="eager"
                     />
                     <span className="ml-1 mt-2 text-slate-900 dark:text-slate-300">React Hook Forms</span>
-                  </a>
+                  </OutboundLink>
                 </span>
               </div>
             </div>

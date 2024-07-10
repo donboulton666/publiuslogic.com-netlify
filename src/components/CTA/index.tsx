@@ -1,5 +1,6 @@
 import * as React from 'react'
 import Section from '@/components/Section'
+import { OutboundLink } from 'gatsby-plugin-google-analytics'
 
 export default function CTA() {
   return (
@@ -11,20 +12,20 @@ export default function CTA() {
         </h2>
         <div className="mt-8 flex lg:mt-0 lg:flex-shrink-0">
           <div className="inline-flex rounded-md shadow">
-            <a
+            <OutboundLink
               href="https://github.com/donaldboulton/publiuslogic.com/generate"
               className="inline-flex items-center justify-center rounded-md border border-transparent bg-slate-900 px-4 py-3 text-base font-medium text-slate-300 hover:bg-slate-950"
             >
               Use Template
-            </a>
+            </OutboundLink>
           </div>
           <div className="ml-3 inline-flex rounded-md shadow">
-            <a
+            <OutboundLink
               href="https://github.com/donaldboulton/publiuslogic.com"
               className="inline-flex items-center justify-center rounded-md border border-transparent bg-slate-900 px-4 py-3 text-base font-medium text-slate-300 hover:bg-slate-950"
             >
               Github Repo
-            </a>
+            </OutboundLink>
           </div>
         </div>
       </div>

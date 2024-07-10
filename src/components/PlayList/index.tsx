@@ -1,8 +1,9 @@
 import * as React from 'react'
+import { OutboundLink } from 'gatsby-plugin-google-analytics'
 
 const PlayList = () => {
   return (
-    <a
+    <OutboundLink
       href="https://open.spotify.com/playlist/2e8gSRRM6gKyOARqywHHTI"
       rel="noopener noreferrer"
       target="_blank"
@@ -19,7 +20,7 @@ const PlayList = () => {
           <span className="ml-2 font-medium">Spotify</span>
         </div>
       </div>
-    </a>
+    </OutboundLink>
   )
 }
 

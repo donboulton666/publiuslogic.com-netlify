@@ -18,10 +18,7 @@ export function onRenderBody({ setHtmlAttributes, setHeadComponents, setPreBodyC
   if (process.env.NODE_ENV !== 'production' && process.env.NODE_ENV !== 'test') return null
   setHtmlAttributes({ lang: 'en' })
   setHeadComponents([
-    <script 
-      key="gtag"
-      src={`${ORIGIN}/gtag/js?id=${GATSBY_GA_MEASUREMENT_ID}`} 
-    />,
+    <script key="gtag" src={`${ORIGIN}/gtag/js?id=${GATSBY_GA_MEASUREMENT_ID}`} />,
     <script
       key="gtag"
       dangerouslySetInnerHTML={{

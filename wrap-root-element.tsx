@@ -35,12 +35,14 @@ import VideoWrapper from './src/components/VideoWrapper'
 import HoverMenu from './src/components/HoverMenu'
 import ImageColWrapperPage from './src/components/ImageColWrapper'
 import IframeWrapperLarge from './src/components/IframeWrapperLarge'
+import Box from './src/components/box'
 
 const Acronym = (props) => <abbr style={{ color: '#8b5cf6' }} {...props} />
 
 const components = {
   abbr: Acronym,
   A: A,
+  Box: Box,
   FindOutMore: FindOutMore,
   Center: Center,
   CenterItem: CenterItem,

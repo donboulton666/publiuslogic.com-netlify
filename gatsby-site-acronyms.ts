@@ -12,7 +12,6 @@ export default {
   CDN: 'Content Delivery Network',
   CMS: 'Content Management System',
   CRUD: 'Create Read Update Delete',
-  CMS: 'Content Management System',
   CTP: 'Community Technology Preview',
   DIY: 'Do It Yourself',
   DAOC: 'Demonic Alexandria Ocasio Cortez',
@@ -102,5 +101,5 @@ export default {
   XGA: 'Extended Graphics Array',
   XHTML: 'Extensible Hypertext Markup Language',
   XML: 'Extensible Markup Language',
-  YAML: "YAML Ain't Markup Language",
+  YAML: "YAML Ya Ain't Markup Language",
 }
