@@ -1,9 +1,11 @@
 import * as React from 'react'
+import { useRef, forwardRef } from 'react'
 import { Link } from 'gatsby'
 import Layout from '@/components/Layout'
 import PageImage from '../../static/assets/SSR_for_blog_article_and_G4_overview_page.jpg'
+import PageTransition from '@/components/PageTransition'
 
-const PageHero = loadable(() => import('@/components/PageHero'))
+const PageHero = React.lazy(() => import('@/components/PageHero'))
 
 function refreshPage() {
   if (typeof window !== undefined) {
@@ -11,11 +13,15 @@ function refreshPage() {
   }
 }
 
-const SsrPage = ({ serverData }) => {
+type SsrPageRef = React.ForwardedRef<HTMLDivElement>
+
+function SsrPage(serverData, serverDataprops, ref: SsrPageRef) {
+  const refPage = useRef()
   return (
-    <>
+    <>  
       <Layout>
-        <div className="left-beams">
+        <PageTransition ref={ref} key={refPage}>
+        <div className="left-beams">          
           <PageHero title="SSR" description="Sever Side Rendering." image={PageImage} />
           <div>
             <div className="mx-auto mb-32 mt-16 max-w-md overflow-hidden rounded-xl bg-slate-300 text-slate-900 shadow-md dark:bg-slate-900 dark:text-slate-200 md:max-w-2xl">
@@ -53,12 +59,13 @@ const SsrPage = ({ serverData }) => {
             </div>
           </div>
         </div>
+        </PageTransition>
       </Layout>
     </>
   )
 }
 
-export default SsrPage
+export default forwardRef(SsrPage)
 
 export async function getServerData() {
   try {

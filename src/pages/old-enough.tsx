@@ -72,7 +72,7 @@ function OldEnough(props, ref: OldEnoughRef) {
                   <IframeWrapperLarge>
                     <ReactPlayer
                       ref={refPlayer}
-                      url="https://www.youtube.com/embed/W99gdQlbv3I?si=6U_TIqIiju_nRimW"
+                      url="https://www.youtube.com/embed/8BXCVY_-RmU"
                       height="100%"
                       width="100%"
                       controls={true}

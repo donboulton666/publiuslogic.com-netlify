@@ -28,7 +28,7 @@ function Dsg(props, ref: DsgRef) {
             <div className="mt-10">
               <div className="mb-16 mt-6 flex flex-col items-center">
                 <div className="text-slate-900 dark:text-slate-200">
-                  <Link to="/blog/gatsby-version-four">Back to Post</Link>
+                  <Link to="/blog/gatsby-version-five">Back to Post</Link>
                   <br />
                   <h1 className="mb-2 mt-2 text-lg font-bold leading-tight">DSG: Deferred Static Generation</h1>
                   <Callout>This page was generated At Runtime!</Callout>
