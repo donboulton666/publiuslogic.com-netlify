@@ -3,12 +3,16 @@ import { wrapRootElement as wrap } from './wrap-root-element'
 import { AnimatePresence } from 'framer-motion'
 
 export function wrapPageElement({ element }) {
+  const onExitComplete = () => {
+    window.scrollTo({ top: 0 })
+  }
   return (
-    <AnimatePresence mode="wait" initial={false}>
+    <AnimatePresence onExitComplete={onExitComplete} mode="wait" initial={false}>
       {element}
     </AnimatePresence>
   )
 }
+
 export const wrapRootElement = wrap
 
 const ORIGIN = 'https://www.googletagmanager.com'

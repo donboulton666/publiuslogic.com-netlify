@@ -69,6 +69,9 @@ yarn add framer-motion
 import * as React from "react"
 import { AnimatePresence } from "framer-motion"
 
+const onExitComplete = () => {
+  window.scrollTo({ top: 0 })
+}
 export function wrapPageElement({ element }) {
   return <AnimatePresence wait>{element}</AnimatePresence>
 }
@@ -78,7 +81,7 @@ export function wrapPageElement({ element }) {
 
 <Section>
 
-## Wrap Root Element gatsby ssr
+## Wrap Page Element gatsby ssr
 
 </Section>
 
@@ -88,8 +91,12 @@ export function wrapPageElement({ element }) {
 import * as React from "react"
 import { AnimatePresence } from "framer-motion"
 
+const onExitComplete = () => {
+	window.scrollTo({ top: 0 })
+}
+
 export function wrapPageElement({ element }) {
-  return <AnimatePresence wait>{element}</AnimatePresence>
+  return <AnimatePresence onExitComplete={onExitComplete} mode="wait" initial={false}>{element}</AnimatePresence>
 }
 ```
 
@@ -103,8 +110,10 @@ export function wrapPageElement({ element }) {
 
 <Section>
 
+Using framer motion <A href="https://www.framer.com/motion/use-in-view/" target="_blank" area-label="useInView" alt="useInView">useInView</A>
+
 ```js:title=Animated-Sections
-import * as React from 'react'
+import * as React from 'react' 
 import { useRef } from 'react'
 import { useInView } from 'framer-motion'
 

@@ -15,8 +15,8 @@ function refreshPage() {
 
 type SsrPageRef = React.ForwardedRef<HTMLDivElement>
 
-function SsrPage(serverData, serverDataprops, ref: SsrPageRef) {
-  const refPage = useRef()
+function SsrPage(serverData: { message: string | undefined }, serverDataprops: any, ref: SsrPageRef) {
+  
   return (
     <>  
       <Layout>

@@ -6,8 +6,11 @@ import { wrapRootElement as wrap } from './wrap-root-element'
 import { AnimatePresence } from 'framer-motion'
 
 export function wrapPageElement({ element }) {
+  const onExitComplete = () => {
+    window.scrollTo({ top: 0 })
+  }
   return (
-    <AnimatePresence mode="wait" initial={false}>
+    <AnimatePresence onExitComplete={onExitComplete} mode="wait" initial={false}>
       {element}
     </AnimatePresence>
   )
@@ -53,3 +56,7 @@ export const onRouteUpdate = ({ location }) => {
     }
   }, 100)
 }
+function gtag(arg0: string, arg1: string, arg2: string, arg3: { page_path: any }) {
+  throw new Error('Function not implemented.')
+}
+
