@@ -273,6 +273,8 @@ const config: GatsbyConfig = {
         enableWebVitalsTracking: true,
       },
     },
+    `gatsby-plugin-perf-budgets`,
+    `gatsby-plugin-webpack-bundle-analyser-v2`,
     {
       resolve: 'gatsby-plugin-offline',
       options: {
