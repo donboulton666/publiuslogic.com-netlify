@@ -13,7 +13,6 @@ import { SuspenseHelper } from '@/components/SuspenseHelper'
 
 const Bio = React.lazy(() => import('@/components/Bio'))
 const Tags = React.lazy(() => import('@/components/SiteTags'))
-const GiscusComments = React.lazy(() => import('@/components/GiscusComments'))
 const WavyHr = React.lazy(() => import('@/components/WavyHr'))
 
 interface ImageProp {
@@ -128,9 +127,6 @@ function BlogPost({ data }: PageProps<DataProps>, ref: BlogPostRef) {
                   </div>
                 </div>
                 <MDXRenderer localImages={frontmatter.embeddedImagesLocal}>{data.mdx.body}</MDXRenderer>
-                <SuspenseHelper fallback={<div>Loading...</div>}>
-                  <GiscusComments mapping={pathname} />
-                </SuspenseHelper>
                 <SuspenseHelper fallback={<div>Loading...</div>}>
                   <WavyHr />
                 </SuspenseHelper>
