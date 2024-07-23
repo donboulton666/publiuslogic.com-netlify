@@ -261,7 +261,7 @@ const config: GatsbyConfig = {
       resolve: `gatsby-plugin-google-gtag`,
       options: {
         trackingIds: [
-          "UA-24847941-1",
+          "G-LGV204F0PT",
           "AW-CONVERSION_ID",
           "DC-FLOODIGHT_ID",
         ],
