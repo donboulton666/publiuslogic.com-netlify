@@ -8,7 +8,7 @@ import PageTransition from '@/components/PageTransition'
 import Seo from '@/components/Seo'
 import Image from '../../static/svg/undraw/undraw_super_thank_you_re_f8bo.svg'
 import OGImage from '../../static/images/undraw/undraw_Super_thank_you_re_f8bo.png'
-import { OutboundLink } from 'gatsby-plugin-google-analytics'
+import { OutboundLink } from 'gatsby-plugin-google-gtag'
 import PageHero from '@/components/PageHero'
 
 const ogimage = {

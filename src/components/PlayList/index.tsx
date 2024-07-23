@@ -1,5 +1,5 @@
 import * as React from 'react'
-import { OutboundLink } from 'gatsby-plugin-google-analytics'
+import { OutboundLink } from 'gatsby-plugin-google-gtag'
 
 const PlayList = () => {
   return (

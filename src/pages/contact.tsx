@@ -13,7 +13,7 @@ import WavyHr from '@/components/WavyHr'
 import LeftText from '@/components/LeftText'
 import Map from '@/components/Map'
 import ContactForm from '@/components/ContactForm'
-import { OutboundLink } from 'gatsby-plugin-google-analytics'
+import { OutboundLink } from 'gatsby-plugin-google-gtag'
 
 const ogimage = {
   src: OGImage,

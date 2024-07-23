@@ -17,7 +17,7 @@ import {
   TableCellsIcon,
   ArrowTopRightOnSquareIcon,
 } from '@heroicons/react/24/outline'
-import { OutboundLink } from 'gatsby-plugin-google-analytics'
+import { OutboundLink } from 'gatsby-plugin-google-gtag'
 
 const godNavigation = [
   { name: 'Creation', href: '/blog/creation-of-all', current: false },

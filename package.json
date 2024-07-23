@@ -55,7 +55,7 @@
     "gatsby-adapter-netlify": "^1.1.4",
     "gatsby-plugin-algolia": "^1.0.3",
     "gatsby-plugin-babel-optional-chaining": "^1.0.0",
-    "gatsby-plugin-google-analytics": "^5.13.1",
+    "gatsby-plugin-google-gtag": "^5.13.1",
     "gatsby-plugin-image": "3.13.1",
     "gatsby-plugin-manifest": "^5.13.1",
     "gatsby-plugin-mdx": "3.20.0",

@@ -15,25 +15,19 @@ export function wrapPageElement({ element }) {
 
 export const wrapRootElement = wrap
 
-const ORIGIN = 'https://www.googletagmanager.com'
-const GATSBY_GA_MEASUREMENT_ID = 'G-LGV204F0PT'
-
-export function onRenderBody({ setHtmlAttributes, setHeadComponents, setPreBodyComponents }) {
+export function onRenderBody({ setHtmlAttributes, setPreBodyComponents }) {
   if (process.env.NODE_ENV !== 'production' && process.env.NODE_ENV !== 'test') return null
   setHtmlAttributes({ lang: 'en' })
-  setHeadComponents([
-    <script key="gtag" src={`${ORIGIN}/gtag/js?id=${GATSBY_GA_MEASUREMENT_ID}`} />,
-    <script
-      key="gtag"
+  setPreBodyComponents([
+    <noscript
+      key="gtm"
       dangerouslySetInnerHTML={{
-        __html: `window.dataLayer = window.dataLayer || [];
-        window.gtag = function gtag(){ window.dataLayer.push(arguments);}
-        gtag('js', new Date()); 
-        gtag('config', '${GATSBY_GA_MEASUREMENT_ID}', { send_page_view: false })`,
+        __html: `
+                  <iframe src="https://www.googletagmanager.com/ns.html?id=G-LGV204F0PT" height="0" width="0"
+                      style="display:none;visibility:hidden"></iframe>
+                `,
       }}
     />,
-  ])
-  setPreBodyComponents([
     React.createElement('script', {
       key: 'gatsby-dark-mode',
       dangerouslySetInnerHTML: {
@@ -73,7 +67,7 @@ void function() {
       key="gtm"
       dangerouslySetInnerHTML={{
         __html: `
-                  <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WLCMLLP" height="0" width="0"
+                  <iframe src="https://www.googletagmanager.com/ns.html?id=G-LGV204F0PT" height="0" width="0"
                       style="display:none;visibility:hidden"></iframe>
                 `,
       }}

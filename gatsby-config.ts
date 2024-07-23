@@ -258,19 +258,25 @@ const config: GatsbyConfig = {
       },
     },
     {
-      resolve: `gatsby-plugin-google-analytics`,
+      resolve: `gatsby-plugin-google-gtag`,
       options: {
-        trackingId: 'UA-24847941-1',
-        head: false,
-        anonymize: true,
-        respectDNT: true,
-        exclude: ['/404/**', '/thanks/'],
-        pageTransitionDelay: 0,
-        defer: false,
-        sampleRate: 5,
-        siteSpeedSampleRate: 10,
-        cookieDomain: 'publiuslogic.com',
-        enableWebVitalsTracking: true,
+        trackingIds: [
+          "UA-24847941-1",
+          "AW-CONVERSION_ID",
+          "DC-FLOODIGHT_ID",
+        ],
+        gtagConfig: {
+          optimize_id: "G-LGV204F0PT",
+          anonymize_ip: true,
+          cookie_expires: 0,
+        },
+        pluginConfig: {
+          head: false,
+          respectDNT: true,
+          exclude: ['/404/**', '/thanks/'],
+          origin: "https://publiuslogic.com/",
+          delayOnRouteUpdate: 0,
+        },
       },
     },
     {

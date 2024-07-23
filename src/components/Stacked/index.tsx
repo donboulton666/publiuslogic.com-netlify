@@ -3,7 +3,7 @@ import { StaticImage } from 'gatsby-plugin-image'
 import clsx from 'clsx'
 import { Disclosure, Menu, Transition } from '@headlessui/react'
 import { MusicalNoteIcon } from '@heroicons/react/24/outline'
-import { OutboundLink } from 'gatsby-plugin-google-analytics'
+import { OutboundLink } from 'gatsby-plugin-google-gtag'
 
 const Stacked = () => {
   return (

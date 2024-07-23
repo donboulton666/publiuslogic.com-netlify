@@ -4,7 +4,7 @@ import GatsbyImage from '../../../static/svg/undraw/undraw_gatsbyjs_st4g.svg'
 import TailwindImage from '../../../static/svg/undraw/undraw_tailwind_css_1egw.svg'
 import ReactImage from '../../../static/svg/undraw/undraw_react_y-7-wq.svg'
 import WavyHr from '@/components/WavyHr'
-import { OutboundLink } from 'gatsby-plugin-google-analytics'
+import { OutboundLink } from 'gatsby-plugin-google-gtag'
 
 const callouts = [
   {

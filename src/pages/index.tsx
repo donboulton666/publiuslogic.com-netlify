@@ -12,7 +12,7 @@ import AnimatedCharacters from '@/components/AnimatedCharacters'
 import Layout from '@/components/Layout'
 import OGImage from '../../static/images/jpg/dbbg.jpg'
 import { SuspenseHelper } from '@/components/SuspenseHelper'
-import { OutboundLink } from 'gatsby-plugin-google-analytics'
+import { OutboundLink } from 'gatsby-plugin-google-gtag'
 
 const LatestArticles = React.lazy(() => import('@/components/LatestArticles'))
 const Features = React.lazy(() => import('@/components/Features'))

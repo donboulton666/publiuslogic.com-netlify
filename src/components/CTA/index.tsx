@@ -1,6 +1,6 @@
 import * as React from 'react'
 import Section from '@/components/Section'
-import { OutboundLink } from 'gatsby-plugin-google-analytics'
+import { OutboundLink } from 'gatsby-plugin-google-gtag'
 
 export default function CTA() {
   return (
