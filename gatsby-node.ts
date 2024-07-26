@@ -1,10 +1,5 @@
 import { GatsbyNode } from 'gatsby'
 import path from 'path'
-import { copyLibFiles } from '@builder.io/partytown/utils'
-
-exports.onPreBuild = async () => {
-  await copyLibFiles(path.join(__dirname, 'static', '~partytown'))
-}
 
 exports.onCreateWebpackConfig = ({ stage, loaders, actions }) => {
   if (stage === 'build-html' || stage === 'develop-html') {
