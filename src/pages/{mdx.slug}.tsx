@@ -1,7 +1,7 @@
 import * as React from 'react'
 import { useRef, forwardRef } from 'react'
 import type { HeadProps } from 'gatsby'
-import { graphql, Link, PageProps, FC } from 'gatsby'
+import { graphql, PageProps, FC } from 'gatsby'
 import { MDXRenderer } from 'gatsby-plugin-mdx'
 import Layout from '@/components/Layout'
 import PageTransition from '@/components/PageTransition'
@@ -10,13 +10,14 @@ import NowPlaying from '@/components/PlayList'
 import SeoBlog from '@/components/Seo/SeoBlog'
 import ImageColWrapperPage from '@/components/ImageColWrapper'
 import { SuspenseHelper } from '@/components/SuspenseHelper'
+import { IGatsbyImageData } from 'gatsby-plugin-image'
 
 const Bio = React.lazy(() => import('@/components/Bio'))
 const Tags = React.lazy(() => import('@/components/SiteTags'))
 const WavyHr = React.lazy(() => import('@/components/WavyHr'))
 
 interface ImageProp {
-  image: GatsbyImageData
+  image: IGatsbyImageData
   full: IGatsbyImageData
   thumb: IGatsbyImageData
   imgClass?: string
@@ -53,7 +54,8 @@ type DataProps = {
   }
 }
 
-interface PageProps {
+interface BlogPostProps<T> {
+  listOfData: T[];
   data: {
     mdx: {
       frontmatter: {
@@ -81,10 +83,30 @@ interface PageProps {
 }
 
 type BlogPostRef = React.ForwardedRef<HTMLDivElement>
+const url = typeof window !== 'undefined' ? window.location.href : ''
 
-function BlogPost({ data }: PageProps<DataProps>, ref: BlogPostRef) {
+function BlogPost({ data }: BlogPostProps<DataProps>, ref: BlogPostRef) {
+  // @ts-ignore
   const { frontmatter, timeToRead, id, customWrapper = ImageColWrapperPage, imgClass = '' } = data.mdx
   const pathname = '/' + data.mdx.slug
+  const current_page = url
+  fetch('/page_view?page=' + encodeURIComponent(current_page), {
+    method: 'GET',
+    headers: {
+      'Content-Type': 'application/x-www-form-urlencoded',
+    },
+  })
+    .then(response => response.json())
+    .then(data => {
+      var viewCount = data.data.view_count
+      // @ts-ignore
+      document.getElementById('viewCountText').textContent = viewCount
+      var svg = document.querySelector('svg')
+      // @ts-ignore
+      svg.setAttribute('aria-label', 'VIEW: ' + viewCount)
+    })
+    .catch(error => console.error('Error:', error))
+
   return (
     <>
       <Layout>
