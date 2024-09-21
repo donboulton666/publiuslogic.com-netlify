@@ -275,7 +275,7 @@ const config: GatsbyConfig = {
           respectDNT: true,
           exclude: ['/404/**', '/thanks/'],
           origin: "https://publiuslogic.com/",
-          delayOnRouteUpdate: 0,
+          delayOnRouteUpdate: 1,
         },
       },
     },
