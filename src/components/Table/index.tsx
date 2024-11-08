@@ -222,6 +222,24 @@ const Table = () => {
                     <td className="px-6 py-4 text-slate-200">Creation</td>
                     <td className="px-6 py-4 text-slate-200">Devil</td>
                   </tr>
+                  <tr className="border-b border-slate-700 bg-slate-300 dark:bg-slate-700">
+                    <th
+                      scope="row"
+                      className="whitespace-nowrap px-6 py-4 font-medium text-slate-900 dark:text-slate-100"
+                    >
+                      <Link
+                        to="/blog/groups"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="font-medium text-slate-200 underline underline-offset-8 hover:text-slate-100 hover:shadow-slate-200/50"
+                      >
+                        Devilish Groups
+                      </Link>
+                    </th>
+                    <td className="px-6 py-4 text-slate-200">2024-08-08</td>
+                    <td className="px-6 py-4 text-slate-200">Truth</td>
+                    <td className="px-6 py-4 text-slate-200">Devil</td>
+                  </tr>
                 </tbody>
               </table>
             </div>
