@@ -55,6 +55,7 @@ const logicNavigation = [
 const angieNavigation = [
   { name: 'Gallery', href: '/gallery', current: false },
   { name: 'Old Enough', href: '/old-enough', current: false },
+  { name: 'Charlotte Summers', href: '/blog/charlotte-summers', current: false },
   { name: 'Angelina', href: '/blog/angelina-jordan', current: false },
   { name: 'Trinity', href: '/blog/trinity-of-angels', current: false },
 ]
