@@ -60,6 +60,7 @@ const components = {
   VideoThree: VideoThree,
   VideoFive: VideoFive,
   VideoSeven: VideoSeven,
+  VideoTen: VideoTen,
   Accordion: Accordion,
   SingleAccordion: SingleAccordion,
   Table: Table,
