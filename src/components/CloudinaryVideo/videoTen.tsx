@@ -6,7 +6,7 @@ import { videoCodec } from '@cloudinary/url-gen/actions/transcode'
 import { auto, vp9 } from '@cloudinary/url-gen/qualifiers/videoCodec'
 import VideoWrapper from './wrapper'
 
-const VideoOne = () => {
+const VideoTen = () => {
   const vid = new CloudinaryVideo('videos/Biden_To_PARDON_FAUCI_Liz_Cheney_More', {
     cloudName: 'mansbooks',
   })
@@ -42,4 +42,4 @@ const VideoOne = () => {
   )
 }
 
-export default VideoOne
+export default VideoTen
