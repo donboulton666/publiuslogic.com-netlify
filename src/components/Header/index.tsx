@@ -34,6 +34,7 @@ const godNavigation = [
 ]
 
 const logicNavigation = [
+  { name: 'Fair and Square', href: '/blog/fair-and-square', current: false },
   { name: 'Bullshit', href: '/blog/bullshit', current: false },
   { name: 'Government', href: '/blog/government', current: false },
   { name: 'Homeless', href: '/blog/homeless', current: false },
@@ -53,10 +54,8 @@ const logicNavigation = [
 ]
 
 const angieNavigation = [
-  { name: 'Old Enough', href: '/old-enough', current: false },
   { name: 'Charlotte Summers', href: '/blog/charlotte-summers', current: false },
   { name: 'Angelina', href: '/blog/angelina-jordan', current: false },
-  { name: 'Trinity', href: '/blog/trinity-of-angels', current: false },
 ]
 
 const programmingNavigation = [
