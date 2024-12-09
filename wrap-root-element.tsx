@@ -19,6 +19,7 @@ import VideoThree from './src/components/CloudinaryVideo/videoThree'
 import VideoFive from './src/components/CloudinaryVideo/videoFive'
 import VideoSeven from './src/components/CloudinaryVideo/videoSeven'
 import VideoTen from './src/components/CloudinaryVideo/videoTen'
+import VideoEleven1 from './src/components/CloudinaryVideo/videoEleven1'
 import Love from './src/components/CloudinaryVideo/love'
 import CloudinaryVideo from './src/components/CloudinaryVideo'
 import Accordion from './src/components/Accordion'
@@ -61,6 +62,7 @@ const components = {
   VideoFive: VideoFive,
   VideoSeven: VideoSeven,
   VideoTen: VideoTen,
+  VideoEleven1, VideoEleven1,
   Accordion: Accordion,
   SingleAccordion: SingleAccordion,
   Table: Table,
