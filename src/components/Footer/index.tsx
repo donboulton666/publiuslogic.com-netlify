@@ -50,8 +50,8 @@ export default function Footer() {
                           href="https://donwboulton.com"
                           rel="noopener noreferrer"
                           target="_blank"
-                          aria-describedby="AJ Official"
-                          area-label="AJ Official"
+                          aria-describedby="DWB Website"
+                          area-label="DWB Website"
                         >
                           <span className="pl-2 text-xl">D.W.B's Website</span>
                         </OutboundLink>
@@ -70,7 +70,7 @@ export default function Footer() {
                         </svg>
                         <OutboundLink
                           className="hover:text-wine-300"
-                          href="https://www.youtube.com/channel/UCHED4RFSxXXNGDDvWpgzHXg"
+                          href="https://www.youtube.com/@donboulton666"
                           rel="noopener noreferrer"
                           target="_blank"
                           aria-describedby="YouTube Channel"
@@ -117,10 +117,10 @@ export default function Footer() {
                           className="hover:text-wine-300"
                           rel="noopener noreferrer"
                           target="_blank"
-                          aria-describedby="AJ Instagram"
+                          aria-describedby="DWB Instagram"
                           area-label="AJ Instagram"
                         >
-                          <span className="pl-2 text-xl">AJ Instagram</span>
+                          <span className="pl-2 text-xl">DWB Instagram</span>
                         </OutboundLink>
                       </span>
                     </div>
@@ -136,14 +136,14 @@ export default function Footer() {
                           </g>
                         </svg>
                         <OutboundLink
-                          href="https://www.youtube.com/watch?v=kjwD884SYRE&list=PLTa09znYPWvKpWlZAAF3v2KEa4b7_tMBf"
+                          href="https://www.youtube.com/watch?v=G7ceN1JqdUQ&list=PLC06D3D53BA50A744"
                           className="hover:text-wine-300"
                           rel="noopener noreferrer"
                           target="_blank"
-                          aria-describedby="AJ Playlists"
-                          area-label="AJ Playlists"
+                          aria-describedby="Playlists"
+                          area-label="Playlists"
                         >
-                          <span className="pl-2 text-xl">AJ Playlists</span>
+                          <span className="pl-2 text-xl">Playlists</span>
                         </OutboundLink>
                       </span>
                     </div>
