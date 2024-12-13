@@ -1,7 +1,7 @@
 import * as React from 'react'
-import { useRef, forwardRef } from 'react'
+import { useRef, forwardRef, FC } from 'react'
 import type { HeadProps } from 'gatsby'
-import { graphql, Link, PageProps, FC } from 'gatsby'
+import { graphql } from 'gatsby'
 import { MDXRenderer } from 'gatsby-plugin-mdx'
 import Layout from '@/components/Layout'
 import PageTransition from '@/components/PageTransition'
@@ -53,7 +53,7 @@ type DataProps = {
   }
 }
 
-interface PageProps {
+interface MdxProps {
   data: {
     mdx: {
       frontmatter: {
@@ -82,7 +82,7 @@ interface PageProps {
 
 type BlogPostRef = React.ForwardedRef<HTMLDivElement>
 
-function BlogPost({ data }: PageProps<DataProps>, ref: BlogPostRef) {
+function BlogPost({ data }: MdxProps<DataProps>, ref: BlogPostRef) {
   const { frontmatter, timeToRead, id, customWrapper = ImageColWrapperPage, imgClass = '' } = data.mdx
   const pathname = '/' + data.mdx.slug
   return (

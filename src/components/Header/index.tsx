@@ -59,21 +59,14 @@ const angieNavigation = [
 ]
 
 const programmingNavigation = [
-  {
-    name: 'Applause',
-    href: '/blog/applause-use-sound-confetti',
-    current: false,
-  },
   { name: 'Cookies Gdpr', href: '/blog/cookies', current: false },
   { name: 'Gatsby V5', href: '/blog/gatsby-version-five', current: false },
-  { name: 'JsonLD MDX', href: '/blog/json-ld-mdx', current: false },
   {
     name: 'Netlify Forms',
     href: '/blog/react-netlify-forms',
     current: false,
   },
   { name: 'Hook Forms', href: '/blog/react-hook-form', current: false },
-  { name: 'Party Town', href: '/blog/gatsby-party-town', current: false },
   { name: 'Sectionize', href: '/blog/animated-sections', current: false },
 ]
 

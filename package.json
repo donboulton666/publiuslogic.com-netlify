@@ -3,7 +3,6 @@
   "private": false,
   "description": "To Publius Logic",
   "version": "1.0.0",
-  "type": "module",
   "author": "Donald Boulton",
   "bugs": {
     "url": "https://github.com/donaldboulton/publiuslogic.com/issues"
