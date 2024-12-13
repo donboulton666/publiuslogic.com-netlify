@@ -49,4 +49,3 @@ export const onRouteUpdate = ({ location }) => {
     return null
   }
 }
-

@@ -260,13 +260,9 @@ const config: GatsbyConfig = {
     {
       resolve: `gatsby-plugin-google-gtag`,
       options: {
-        trackingIds: [
-          "G-LGV204F0PT",
-          "AW-CONVERSION_ID",
-          "DC-FLOODIGHT_ID",
-        ],
+        trackingIds: ['G-LGV204F0PT', 'AW-CONVERSION_ID', 'DC-FLOODIGHT_ID'],
         gtagConfig: {
-          optimize_id: "G-LGV204F0PT",
+          optimize_id: 'G-LGV204F0PT',
           anonymize_ip: true,
           cookie_expires: 0,
         },
@@ -274,7 +270,7 @@ const config: GatsbyConfig = {
           head: false,
           respectDNT: true,
           exclude: ['/404/**', '/thanks/'],
-          origin: "https://publiuslogic.com/",
+          origin: 'https://publiuslogic.com/',
           delayOnRouteUpdate: 1,
         },
       },
