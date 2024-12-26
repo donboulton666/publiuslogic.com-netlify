@@ -117,7 +117,7 @@ const config: GatsbyConfig = {
     siteSitemap: 'https://publiuslogic.com/sitemap.xml',
     location: 'OKC, Middle Earth',
     social: {
-      email: 'mailto:donboulton@donboulton.com',
+      email: 'mailto:donboulton666@gmail.com',
       phone: 'tel:+405-863-2165',
       facebook: 'https://www.facebook.com/don.boulton',
       instagram: 'https://www.instagram.com/boulton3662',

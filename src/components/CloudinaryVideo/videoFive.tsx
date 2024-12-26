@@ -6,7 +6,7 @@ import { videoCodec } from '@cloudinary/url-gen/actions/transcode'
 import { auto, vp9 } from '@cloudinary/url-gen/qualifiers/videoCodec'
 import VideoWrapper from './wrapper'
 
-const VideoFour = () => {
+const VideoFive = () => {
   const vid = new CloudinaryVideo('videos/true-jew', { cloudName: 'mansbooks' })
   const videoEl = useRef()
   const sources = [
@@ -40,4 +40,4 @@ const VideoFour = () => {
   )
 }
 
-export default VideoFour
+export default VideoFive

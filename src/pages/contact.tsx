@@ -110,14 +110,14 @@ function Contact(props, ref: ContactRef) {
                                 </g>
                               </svg>
                               <OutboundLink
-                                href="https://youtube.com/c/AngelinaJordanCoverChannel"
+                                href="https://www.youtube.com/@donboulton666"
                                 className="hover:text-wine-300"
                                 rel="noopener noreferrer"
                                 target="_blank"
-                                aria-describedby="AJ Cover Official"
-                                area-label="AJ Cover Official"
+                                aria-describedby="@donboulton666"
+                                area-label="@donboulton666"
                               >
-                                <span className="pl-2">Cover Official</span>
+                                <span className="pl-2">Don's Official</span>
                               </OutboundLink>
                             </span>
                           </div>
@@ -168,8 +168,8 @@ function Contact(props, ref: ContactRef) {
                                 className="hover:text-wine-300"
                                 rel="noopener noreferrer"
                                 target="_blank"
-                                aria-describedby="AJ Instagram"
-                                area-label="AJ Instagram"
+                                aria-describedby="DB Instagram"
+                                area-label="DB Instagram"
                               >
                                 <span className="pl-2 text-lg">Instagram</span>
                               </OutboundLink>
@@ -253,24 +253,24 @@ function Contact(props, ref: ContactRef) {
                     </div>
                     <div className="mb-4 mt-4">
                       <LeftText>
-                        <OutboundLink href="https://mansbooks.com/contact" alt="Buy Me A Coffee">
-                          My{' '}
-                          <span role="img" aria-label="Love" className="text-red-500">
-                            ❤️
+                        <OutboundLink href="https://donwboulton.com/contact" alt="Buy Me A Coffee">
+                        {' '}{' '}Donald{' '}
+                          <span role="img" aria-label="Trash" className="text-rose-500">
+                            😈
                           </span>
-                          's Contacts
+                          {' '}Trump
                         </OutboundLink>
                       </LeftText>
                     </div>
                     <div className="mt-4">
-                      <OutboundLink href="https://mansbooks.com/contact" alt="Buy Me A Coffee">
+                      <OutboundLink href="https://donwboulton.com/contact" alt="Buy Me A Coffee">
                         <StaticImage
                           className="h-[573px] w-[325px] self-center rounded-lg"
-                          src="../../static/images/angie/heidis-party.jpg"
+                          src="../../static/images/demon-donald.png"
                           width={350}
                           height={598}
                           quality={95}
-                          alt="Angie Elvira"
+                          alt="Demon Donald Trump"
                         />
                       </OutboundLink>
                     </div>
@@ -407,12 +407,12 @@ export function Head(props: HeadProps) {
           address: 'OKC, Middle Earth',
           contactPoint: {
             '@type': 'ContactPoint',
-            email: 'donboulton@donboulton.com',
+            email: 'donboulton666@gmail.com',
             telephone: '+405-863-2165',
           },
           description:
             'PubliusLogic has Topics on Creation, Law, USA and World Governments, Life Matters. Our Main focus is the Re-Creation of Mankind to the Spiritual Beings you have forgotten about, as you only live in the Flesh. Your Soul and Spirit you deny.',
-          email: 'donboulton@donboulton.com',
+          email: 'donboulton666@gmail.com',
           founder: {
             '@id': 'https://donwboulton.com',
           },
@@ -429,7 +429,7 @@ export function Head(props: HeadProps) {
           },
           name: 'PubliusLogic',
           sameAs: [
-            'mailto:donboulton@donboulton.com',
+            'mailto:donboulton666@gmail.com',
             'tel:+405-863-2165',
             'https://www.facebook.com/donboulton',
             'https://www.instagram.com/boulton3662',

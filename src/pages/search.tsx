@@ -148,12 +148,12 @@ export function Head(props: HeadProps) {
           address: 'OKC, Middle Earth',
           contactPoint: {
             '@type': 'ContactPoint',
-            email: 'donboulton@donboulton.com',
+            email: 'donboulton666@gmail.com',
             telephone: '+405-863-2165',
           },
           description:
             'PubliusLogic has Topics on Creation, Law, USA and World Governments, Life Matters. Our Main focus is the Re-Creation of Mankind to the Spiritual Beings you have forgotten about, as you only live in the Flesh. Your Soul and Spirit you deny.',
-          email: 'donboulton@donboulton.com',
+          email: 'donboulton666@gmail.com',
           founder: {
             '@id': 'https://donwboulton.com',
           },
@@ -170,7 +170,7 @@ export function Head(props: HeadProps) {
           },
           name: 'PubliusLogic',
           sameAs: [
-            'mailto:donboulton@donboulton.com',
+            'mailto:donboulton666@gmail.com',
             'tel:+405-863-2165',
             'https://www.facebook.com/donboulton',
             'https://www.instagram.com/boulton3662',
