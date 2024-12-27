@@ -117,10 +117,10 @@ export default function Footer() {
                           className="hover:text-wine-300"
                           rel="noopener noreferrer"
                           target="_blank"
-                          aria-describedby="DWB Instagram"
-                          area-label="AJ Instagram"
+                          aria-describedby="DB Instagram"
+                          area-label="DB Instagram"
                         >
-                          <span className="pl-2 text-xl">DWB Instagram</span>
+                          <span className="pl-2 text-xl">DB Instagram</span>
                         </OutboundLink>
                       </span>
                     </div>
