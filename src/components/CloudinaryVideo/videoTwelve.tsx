@@ -7,7 +7,10 @@ import { auto, vp9 } from '@cloudinary/url-gen/qualifiers/videoCodec'
 import VideoWrapper from './wrapper'
 
 const VideoTwelve = () => {
-  const vid = new CloudinaryVideo('videos/The_Beatles_Taxman_New_2024_Unlocked_Vocals_True_Stereo_Remix_With_George_Harrison_Tribute_Video', { cloudName: 'mansbooks' })
+  const vid = new CloudinaryVideo(
+    'videos/The_Beatles_Taxman_New_2024_Unlocked_Vocals_True_Stereo_Remix_With_George_Harrison_Tribute_Video',
+    { cloudName: 'mansbooks' }
+  )
   const videoEl = useRef()
   const sources = [
     {

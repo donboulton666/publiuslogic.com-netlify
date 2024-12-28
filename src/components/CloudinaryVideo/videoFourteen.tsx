@@ -7,7 +7,9 @@ import { auto, vp9 } from '@cloudinary/url-gen/qualifiers/videoCodec'
 import VideoWrapper from './wrapper'
 
 const VideoFourteen = () => {
-  const vid = new CloudinaryVideo('videos/Why_Does_Israel_Weaponize_Pornography_Against_Palestinians_', { cloudName: 'mansbooks' })
+  const vid = new CloudinaryVideo('videos/Why_Does_Israel_Weaponize_Pornography_Against_Palestinians_', {
+    cloudName: 'mansbooks',
+  })
   const videoEl = useRef()
   const sources = [
     {

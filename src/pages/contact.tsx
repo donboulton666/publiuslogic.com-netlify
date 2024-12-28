@@ -254,11 +254,12 @@ function Contact(props, ref: ContactRef) {
                     <div className="mb-4 mt-4">
                       <LeftText>
                         <OutboundLink href="https://donwboulton.com/contact" alt="Buy Me A Coffee">
-                        {' '}{' '}Donald{' '}
+                          {' '}
+                          Donald{' '}
                           <span role="img" aria-label="Trash" className="text-rose-500">
                             😈
-                          </span>
-                          {' '}Trump
+                          </span>{' '}
+                          Trump
                         </OutboundLink>
                       </LeftText>
                     </div>
