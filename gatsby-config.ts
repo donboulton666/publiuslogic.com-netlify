@@ -246,7 +246,6 @@ const config: GatsbyConfig = {
       },
     },
     'gatsby-plugin-mdx-embed',
-    'gatsby-plugin-netlify',
     {
       resolve: 'gatsby-plugin-postcss',
       options: {
