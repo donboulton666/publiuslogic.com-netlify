@@ -3,7 +3,6 @@
   "private": false,
   "description": "To Publius Logic",
   "version": "1.0.0",
-  "type": "module",
   "author": "Donald Boulton",
   "bugs": {
     "url": "https://github.com/donaldboulton/publiuslogic.com/issues"
@@ -133,6 +132,7 @@
     "eslint-plugin-react": "^7.37.3",
     "eslint-webpack-plugin": "^4.2.0",
     "gatsby-plugin-eslint": "^4.0.4",
+    "gatsby-plugin-netlify": "^5.1.1",
     "gatsby-plugin-perf-budgets": "^0.0.18",
     "gatsby-plugin-webpack-bundle-analyser-v2": "^1.1.32",
     "postcss": "^8.4.49",
