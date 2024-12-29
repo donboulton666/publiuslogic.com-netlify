@@ -10,7 +10,7 @@ const VideoSeven = () => {
   const vid = new CloudinaryVideo('videos/WITCH-HUNT__Scream_Actress_FIRED_For_Palestine_Posts', {
     cloudName: 'mansbooks',
   })
-  const videoEl = useRef()
+  const videoEl = useRef(undefined)
   const sources = [
     {
       type: 'mp4',

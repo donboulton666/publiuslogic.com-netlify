@@ -141,7 +141,7 @@ const calculateLinesToHighlight = (meta) => {
 }
 
 export const Code = ({ codeString, className, metastring, ...props }) => {
-  const ref = useRef()
+  const ref = useRef(undefined)
   const [isClicked, setIsClicked] = useState(false)
   const duration = 0.4
   const svgVariants = {
@@ -200,7 +200,7 @@ export const Code = ({ codeString, className, metastring, ...props }) => {
 
   const buttonRef = useRef(null)
 
-  const openButtonRef = useRef()
+  const openButtonRef = useRef(undefined)
   /* eslint-disable-next-line @typescript-eslint/no-unused-vars */
   const handleClick = (event) => {
     openButtonRef.current.disabled = true

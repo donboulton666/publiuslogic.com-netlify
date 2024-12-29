@@ -24,7 +24,7 @@ const ogimage = {
 type ContactRef = React.ForwardedRef<HTMLDivElement>
 
 function Contact(props, ref: ContactRef) {
-  const refPage = useRef()
+  const refPage = useRef(undefined)
   return (
     <>
       <Layout>

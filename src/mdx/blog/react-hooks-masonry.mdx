@@ -63,7 +63,7 @@ import { useEffect, useRef } from 'react'
 
 export function useEventListener (eventNames, handler, element) {
   // Create a ref that stores the handler.
-  const savedHandler = useRef()
+  const savedHandler = useRef(undefined)
   if (!Array.isArray(eventNames)) eventNames = [eventNames]
 
   // Save handler to ref.current on initial call to useEventListener
@@ -208,5 +208,3 @@ export default function MasonryExample() {
 Thats it folks!
 
 </Section>
-
-<WavyHr className="mb-1 mt-1 text-wine-300" />

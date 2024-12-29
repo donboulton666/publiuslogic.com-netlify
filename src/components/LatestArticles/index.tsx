@@ -59,9 +59,7 @@ export default function LatestArticles() {
                     <span className="sr-only">{post.frontmatter.title}</span>
                   </Link>
                 </div>
-                <SuspenseHelper fallback={<div>Loading...</div>}>
-                  <WavyHr className="mb-4" />
-                </SuspenseHelper>
+                <WavyHr />
                 <h2 className="mb-4 mt-4">Featured Articles by Topics</h2>
                 <div className="mb-4 mt-10 space-y-12 rounded-lg bg-slate-300 text-slate-900 dark:bg-slate-950 dark:text-slate-300 lg:mt-0 lg:grid lg:grid-cols-3 lg:gap-x-6 lg:space-y-0 xl:grid-cols-3">
                   <div>

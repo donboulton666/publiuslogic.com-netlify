@@ -20,7 +20,7 @@ import {
 import { OutboundLink } from 'gatsby-plugin-google-gtag'
 
 const godNavigation = [
-  { name: 'Creation', href: '/blog/creation-of-all', current: false },
+  { name: 'Creation of All', href: '/blog/creation-of-all', current: false },
   { name: 'Commandments', href: '/blog/commandments', current: false },
   { name: 'Groups', href: '/blog/groups', current: false },
   { name: 'Jew Who', href: '/blog/jew-who', current: false },

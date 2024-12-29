@@ -9,5 +9,12 @@
   "editor.fontLigatures": true, // Does this have a noticeable effect?
 
   "editor.lineNumbers": "on",
-  "cSpell.words": ["crossorigin", "ensashiable", "ivermectin", "Mansbooks", "Publius"]
+  "cSpell.words": [
+    "crossorigin",
+    "Elon",
+    "ensashiable",
+    "ivermectin",
+    "Mansbooks",
+    "Publius"
+  ]
 }

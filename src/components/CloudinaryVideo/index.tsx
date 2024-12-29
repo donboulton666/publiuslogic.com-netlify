@@ -10,7 +10,7 @@ const Video = () => {
   const vid = new CloudinaryVideo('videos/angelina_jordan_suspicious_minds', {
     cloudName: 'mansbooks',
   })
-  const videoEl = useRef()
+  const videoEl = useRef(null)
   const sources = [
     {
       type: 'mp4',

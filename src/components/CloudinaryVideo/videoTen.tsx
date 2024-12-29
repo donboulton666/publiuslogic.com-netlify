@@ -10,7 +10,7 @@ const VideoTen = () => {
   const vid = new CloudinaryVideo('videos/Biden_To_PARDON_FAUCI_Liz_Cheney_More', {
     cloudName: 'mansbooks',
   })
-  const videoEl = useRef()
+  const videoEl = useRef(undefined)
   const sources = [
     {
       type: 'mp4',

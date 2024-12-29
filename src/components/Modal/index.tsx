@@ -11,10 +11,11 @@ export interface ModalProps {
   dialogContent: JSX.Element
   dialogTitle: string
   children: ReactNode
+  key: String
 }
 
 export const Modal: FC<ModalProps> = (props) => {
-  const { dialogTitle, dialogContent, children, ...rest } = props
+  const { dialogTitle, dialogContent, children, key, ...rest } = props
   const [isOpen, setIsOpen] = useState(true)
 
   /* eslint-disable-next-line @typescript-eslint/no-unused-vars */
@@ -40,7 +41,7 @@ export const Modal: FC<ModalProps> = (props) => {
           </span>
         </button>
       </div>
-      <Transition.Root appear show={isOpen} as={Fragment} {...rest}>
+      <Transition appear show={isOpen} as={Fragment} {...rest}>
         <Dialog
           as="div"
           className="relative z-30"
@@ -131,7 +132,7 @@ export const Modal: FC<ModalProps> = (props) => {
             </div>
           </div>
         </Dialog>
-      </Transition.Root>
+      </Transition>
     </>
   )
 }
