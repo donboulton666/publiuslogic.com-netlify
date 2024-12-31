@@ -1,7 +1,6 @@
 import type { GatsbyConfig } from 'gatsby'
 import siteAcronyms from './gatsby-site-acronyms'
 import adapter from 'gatsby-adapter-netlify'
-import queries from './src/utils/algolia-queries'
 import resolveConfig from 'tailwindcss/resolveConfig'
 import tailwindConfig from './tailwind.config'
 import remarkSlug from 'remark-slug'
@@ -240,7 +239,7 @@ const config: GatsbyConfig = {
         appId: process.env.GATSBY_ALGOLIA_APP_ID,
         apiKey: process.env.ALGOLIA_ADMIN_KEY,
         indexName: process.env.GATSBY_ALGOLIA_INDEX_NAME,
-        queries,
+        queries: require("./src/utils/algolia-queries"),
         chunkSize: 1000,
         skipIndexing: false,
       },
