@@ -48,6 +48,7 @@ const logicNavigation = [
   { name: 'Arcata CA', href: '/blog/arcata', current: false },
   { name: 'EMF EMP', href: '/blog/emf-emp', current: false },
   { name: 'Intelligence Failure', href: '/blog/intelligence-failure', current: false },
+  { name: 'Los Angeles', href: '/blog/los-angeles', current: false },
   { name: 'NATO Disarmed', href: '/blog/nato-disarmed', current: false },
   { name: 'Philosophy', href: '/blog/philosophy', current: false },
   { name: 'USA Elections', href: '/blog/usa-election', current: false },
