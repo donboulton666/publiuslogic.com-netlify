@@ -1,4 +1,5 @@
 const indexName = `Posts`
+const crypto = require('crypto')
 
 interface postToAlgoliaRecordProps {
     node:{
@@ -6,6 +7,7 @@ interface postToAlgoliaRecordProps {
       path: String 
       frontmatter: String 
       fields: String
+      item: String
     }
 }
 
@@ -24,11 +26,17 @@ const postQuery = `{
           }
           slug
           excerpt(pruneLength: 5000)
+          internal {
+            contentDigest
+            type
+            owner
+          }
         }
       }
     }
   }`
-export default function postToAlgoliaRecord({ node: { id, path, frontmatter, fields, ...rest } }: postToAlgoliaRecordProps) {
+
+export default function postToAlgoliaRecord({ node: { id, path, frontmatter, fields, item, ...rest } }: postToAlgoliaRecordProps) {
   return {
     objectID: id,
     ...frontmatter,
@@ -37,12 +45,30 @@ export default function postToAlgoliaRecord({ node: { id, path, frontmatter, fie
   }
 }
 
+function transformer(data: { internal: any }[]) {
+  return data.map((item: { internal: any }) => {
+    const hash = crypto
+      .createHash('md5')
+      .update(JSON.stringify(item))
+      .digest('hex');
+
+    return {
+      ...item,
+      internal: {
+        ...item.internal,
+        contentDigest: hash,
+      },
+    };
+  });
+}
+
 const queries = [
   {
     query: postQuery,
     transformer: ({ data }) => data.posts.edges.map(postToAlgoliaRecord),
     indexName,
     settings: { attributesToSnippet: [`excerpt:20`] },
+    mergeSettings: false,
   },
 ]
 

@@ -238,6 +238,8 @@ const config: GatsbyConfig = {
         queries: require("./src/utils/algolia-queries"),
         chunkSize: 1000,
         skipIndexing: false,
+        enablePartialUpdates: true,
+        matchFields: ['path', 'date'],
       },
     },
     'gatsby-plugin-mdx-embed',
