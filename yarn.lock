@@ -1212,6 +1212,11 @@
     "@babel/helper-string-parser" "^7.25.9"
     "@babel/helper-validator-identifier" "^7.25.9"
 
+"@builder.io/partytown@^0.10.3":
+  version "0.10.3"
+  resolved "https://registry.yarnpkg.com/@builder.io/partytown/-/partytown-0.10.3.tgz#32d7179cab9aee1f7cdb3093340039cbd3466252"
+  integrity sha512-N2SWA3c5vEad3rgdAFM3zMb6uc7aXqibkgAz4ijvYzycgQXJ4dE5oH6fGFMXSQWj6ayVlLT1/CmpflYUJHfmQg==
+
 "@builder.io/partytown@^0.7.5":
   version "0.7.6"
   resolved "https://registry.yarnpkg.com/@builder.io/partytown/-/partytown-0.7.6.tgz#697acea6b552167a4dd43ddd4827018aa42e0364"
@@ -8128,6 +8133,11 @@ functions-have-names@^1.2.3:
   version "1.2.3"
   resolved "https://registry.yarnpkg.com/functions-have-names/-/functions-have-names-1.2.3.tgz#0404fe4ee2ba2f607f0e0ec3c80bae994133b834"
   integrity sha512-xckBUXyTIqT97tq2x2AMb+g163b5JFysYk0x4qxNFwbfQkmNZoiRHb6sPzI9/QV33WeuvVYBUIiD4NzNIyqaRQ==
+
+ga-gtag@^1.2.0:
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/ga-gtag/-/ga-gtag-1.2.0.tgz#bede7a5653dede61c100fc4ff345214ee0ff31c1"
+  integrity sha512-j9gxutMdpGMdwaX1SzOG31Ddm+IGFjeNf+N3Z5g+BBpS8FSXOALlrM+ORIGc/QKszGJEDlw+6PfIsJZICsqsGQ==
 
 gatsby-adapter-netlify@^1.2.0:
   version "1.2.0"

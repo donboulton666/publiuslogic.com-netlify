@@ -1,8 +1,9 @@
 const indexName = `Posts`
 const crypto = require('crypto')
 
-interface postToAlgoliaRecordProps {
+interface postToAlgoliaRecordProps {    
     node:{
+      data: any
       id: String
       path: String 
       frontmatter: String 
@@ -36,7 +37,7 @@ const postQuery = `{
     }
   }`
 
-export default function postToAlgoliaRecord({ node: { id, path, frontmatter, fields, item, ...rest } }: postToAlgoliaRecordProps) {
+export default function postToAlgoliaRecord({ node: { id, data, path, frontmatter, fields, item, ...rest } }: postToAlgoliaRecordProps) {
   return {
     objectID: id,
     ...frontmatter,
