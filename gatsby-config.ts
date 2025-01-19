@@ -275,6 +275,9 @@ const config: GatsbyConfig = {
     {
       resolve: 'gatsby-plugin-offline',
       options: {
+        workboxConfig: {
+          globPatterns: ['**/icon-path*']
+        },
         precachePages: [
           '/',
           '/about',
@@ -282,8 +285,6 @@ const config: GatsbyConfig = {
           '/blog/*',
           '/privacy',
           '/thanks',
-          '/gallery',
-          '/old-enough',
           '/tags',
         ],
       },
