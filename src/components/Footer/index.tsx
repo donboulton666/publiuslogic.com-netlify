@@ -159,7 +159,7 @@ export default function Footer() {
                           />
                         </svg>
                         <OutboundLink
-                          href="https://www.facebook.com/don.boulton"
+                          href="https://www.facebook.com/profile.php?id=61555130111015"
                           className="hover:text-wine-300"
                           rel="noopener noreferrer"
                           target="_blank"
@@ -205,7 +205,7 @@ export default function Footer() {
                           />
                         </svg>
                         <OutboundLink
-                          href="https://www.tiktok.com/@donaldboulton"
+                          href="https://www.tiktok.com/@donboulton666"
                           className="hover:text-wine-300"
                           rel="noopener noreferrer"
                           target="_blank"

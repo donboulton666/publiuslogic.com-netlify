@@ -1,72 +1,51 @@
 import * as React from 'react'
-import { ReactNode, FC } from 'react'
-import { useNetlifyForm, NetlifyFormProvider, NetlifyFormComponent, Honeypot } from 'react-netlify-forms'
-import { useForm, Resolver } from 'react-hook-form'
+import { FC } from 'react'
+import { NetlifyForm, Honeypot } from 'react-netlify-forms'
+import Recaptcha, { ReCAPTCHAProps } from "react-google-recaptcha";
 
-type FormValues = {
-  email: string
+export interface NetlifyFormState {
+    loading: boolean;
+    error: boolean;
+    success: boolean;
+    recaptchaError?: boolean | undefined;
+    recaptcha?: React.ReactElement | undefined;
 }
 
-const resolver: Resolver<FormValues> = async (values) => {
-  return {
-    values: values.email ? values : {},
-    errors: !values.email
-      ? {
-          email: {
-            type: 'required',
-            message: 'This is required.',
-          },
-        }
-      : {},
-  }
-}
+const EMAIL_REGEX = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+.[A-Z]{2,4}$/i
 
 interface SubscriptionsProps {
+  name: string;
+  action?: string | undefined;
+  honeypotName?: string | undefined;
+  recaptcha?: ReCAPTCHAProps | undefined;
+  children: (state: NetlifyFormState) => React.ReactElement;
   email: string
-  action?: string | undefined
-  honeypotName?: string | undefined
-  children: ReactNode
+  error: boolean
+  success: boolean
 }
 
-const Subscriptions: FC<SubscriptionsFormProps> = (props) => {
-  const { email, action, honeypotName, children } = props
-  const {
-    register,
-    handleSubmit,
-    reset,
-    formState: { errors },
-  } = useForm<FormValues>({ resolver })
-  const netlify = useNetlifyForm({
-    name: 'subscriptions',
-    action: '/thanks',
-    onSuccess: (response, context) => {
-      console.log('Successfully sent form data to Netlify Server')
-    },
-  })
-
-  const onSubmit = (data) => netlify.handleSubmit(null, data)
-
-  const EMAIL_REGEX = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+.[A-Z]{2,4}$/i
-
+const Subscriptions: FC<SubscriptionsProps> = (props) => {
+  const { email, success, action, error, children } = props  
   return (
     <>
       <div className="mx-auto flex items-center space-x-2 p-2">
-        <NetlifyFormProvider {...netlify}>
-          <NetlifyFormComponent onSubmit={handleSubmit(onSubmit)}>
+        <NetlifyForm name="subscriptions" action='/thanks' honeypotName='bot-field' data-netlify>
+          {({ handleChange, success, error }) => (          
             <>
               <Honeypot />
+                {success && <p>Thanks for contacting us!</p>}
+                  {error && (
+                    <div className="container ml-6 mt-6 text-red-500">Sorry, we could not reach our servers. Please try again later.</div>
+                )}
               <div className="hidden">
                 <label>
                   Don not fill this out if you are human: <input name="bot-field" />
                 </label>
               </div>
-              {netlify.success && <div className="container ml-6 mt-6 text-yellow-500">Thanks for contacting us!</div>}
-              {netlify.error && (
                 <div className="container ml-6 mt-6 text-red-500">
                   Sorry, we could not reach servers. Because it only works on Netlify, our GitHub demo does not provide
                   a response.
                 </div>
-              )}
               <div className="mx-auto space-x-1 overflow-hidden p-1">
                 <span className="group relative flex items-center text-slate-200">
                   <div className="pointer-events-none absolute inset-y-0 left-0 flex items-center rounded-l-md border border-r-0 border-gray-400 bg-gray-200 pl-3 pr-3 text-gray-900 dark:border-gray-800 dark:bg-gray-800 dark:text-gray-400">
@@ -83,17 +62,11 @@ const Subscriptions: FC<SubscriptionsFormProps> = (props) => {
                   </div>
                   <input
                     type="email"
-                    name="email"
                     placeholder="Email"
                     className="w-48 appearance-none rounded border-slate-800 bg-slate-300 p-2.5 px-4 py-3 pl-14 leading-tight text-slate-900 focus:border-wine-300 focus:outline-none focus:ring-slate-500 dark:bg-slate-700 dark:text-slate-200"
                     aria-label="Enter Email"
-                    {...register('email', {
-                      required: 'Email is required',
-                      pattern: {
-                        value: EMAIL_REGEX,
-                        message: 'Invalid email address',
-                      },
-                    })}
+                    onChange={handleChange}
+                    pattern="^[\w.+-]+@[\w.-]+\.[\w]{2,}"
                   />
                   <span className="block space-x-2">
                     <button
@@ -105,11 +78,10 @@ const Subscriptions: FC<SubscriptionsFormProps> = (props) => {
                     </button>
                   </span>
                 </span>
-                {errors.email && <div className="text-red-500">{errors.email.message}</div>}
               </div>
             </>
-          </NetlifyFormComponent>
-        </NetlifyFormProvider>
+          )}
+        </NetlifyForm>
       </div>
     </>
   )
