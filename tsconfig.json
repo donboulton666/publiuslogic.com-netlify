@@ -1,5 +1,5 @@
 {
-  "include": ["./src/**/*", "src/components/Subscriptions/.d.ts"],
+  "include": ["./src/**/*"],
   "exclude": ["node_modules", "public", ".cache"],
   "compilerOptions": {
     "target": "esnext",

@@ -2,7 +2,6 @@ import * as React from 'react'
 import { StaticImage } from 'gatsby-plugin-image'
 import { Link } from 'gatsby'
 import ColumnGridTwo from '@/components/ColumnGridTwo'
-import Subscriptions from '@/components/Subscriptions'
 import { OutboundLink } from 'gatsby-plugin-google-gtag'
 
 export default function Footer() {
@@ -219,11 +218,6 @@ export default function Footer() {
                   </ColumnGridTwo>
                 </div>
               </div>
-              <div className="mt-4">
-                <h4 className="text-xl font-semibold text-slate-300">Subscriptions</h4>
-                <h5 className="mb-2 mt-0 text-lg text-slate-300">Get exclusive newsletter-only content now and then</h5>
-                <Subscriptions />
-              </div>
             </div>
             <div className="w-full px-4 lg:w-6/12">
               <div className="items-top -mb-2 flex flex-wrap">
@@ -273,15 +267,6 @@ export default function Footer() {
                         aria-label="Search Link"
                       >
                         Search Page
-                      </Link>
-                    </li>
-                    <li>
-                      <Link
-                        className="block pb-2 text-lg font-semibold text-slate-300 hover:text-wine-300"
-                        to="/sitemap.xml"
-                        aria-label="Sitemap Link"
-                      >
-                        Sitemap XML
                       </Link>
                     </li>
                   </ul>
@@ -336,15 +321,6 @@ export default function Footer() {
                         aria-label="Privacy Link"
                       >
                         Privacy Policy
-                      </Link>
-                    </li>
-                    <li>
-                      <Link
-                        className="block pb-2 text-lg font-semibold text-slate-300 hover:text-wine-300"
-                        to="/sitemap-posts.xml"
-                        aria-label="Posts XML"
-                      >
-                        Posts XML
                       </Link>
                     </li>
                   </ul>
