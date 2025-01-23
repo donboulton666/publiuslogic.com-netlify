@@ -10,6 +10,9 @@ const loadFeatures = () => import('@/components/FramerFeatures').then((res) => r
 interface SingleAccordionProps {
   children: ReactNode
   label: string
+  src?: string
+  Icon?: React.ComponentType<React.SVGProps<SVGSVGElement>>
+  title: string
 }
 
 const SingleAccordion: FC<SingleAccordionProps> = (props) => {
