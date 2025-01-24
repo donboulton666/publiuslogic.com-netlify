@@ -21,8 +21,10 @@ import { OutboundLink } from 'gatsby-plugin-google-gtag'
 
 const godNavigation = [
   { name: 'Creation of All', href: '/blog/creation-of-all', current: false },
+  { name: 'Churches', href: '/blog/churches', current: false },
   { name: 'Commandments', href: '/blog/commandments', current: false },
   { name: 'Groups', href: '/blog/groups', current: false },
+  { name: 'Judeo Christian', href: '/blog/judeo-christian', current: false },
   { name: 'Jew Who', href: '/blog/jew-who', current: false },
   { name: 'Soul and Hell', href: '/blog/soul-hell', current: false },
   { name: 'Immorality', href: '/blog/immorality-abortion', current: false },

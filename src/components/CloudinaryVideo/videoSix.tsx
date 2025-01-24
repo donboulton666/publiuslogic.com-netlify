@@ -7,10 +7,10 @@ import { auto, vp9 } from '@cloudinary/url-gen/qualifiers/videoCodec'
 import VideoWrapper from './wrapper'
 
 const VideoSix = () => {
-  const vid = new CloudinaryVideo('videos/humn_programing_and_response', {
+  const vid = new CloudinaryVideo('videos/human-programing-and-response', {
     cloudName: 'mansbooks',
   })
-  const videoEl = useRef(undefined)
+  const videoEl = useRef(null)
   const sources = [
     {
       type: 'mp4',

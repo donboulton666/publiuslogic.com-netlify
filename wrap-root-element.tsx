@@ -17,6 +17,7 @@ import VideoOne from './src/components/CloudinaryVideo/videoOne'
 import VideoTwo from './src/components/CloudinaryVideo/videoTwo'
 import VideoThree from './src/components/CloudinaryVideo/videoThree'
 import VideoFive from './src/components/CloudinaryVideo/videoFive'
+import VideoSix from './src/components/CloudinaryVideo/videoSIx'
 import VideoFour from './src/components/CloudinaryVideo/videoFour'
 import VideoSeven from './src/components/CloudinaryVideo/videoSeven'
 import VideoTen from './src/components/CloudinaryVideo/videoTen'
@@ -66,6 +67,7 @@ const components = {
   VideoThree: VideoThree,
   VideoFour: VideoFour,
   VideoFive: VideoFive,
+  VideoSix: VideoSix,
   VideoSeven: VideoSeven,
   VideoTen: VideoTen,
   VideoEleven1: VideoEleven1,
