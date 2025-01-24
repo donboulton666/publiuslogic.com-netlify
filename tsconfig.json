@@ -3,7 +3,7 @@
   "exclude": ["node_modules", "public", ".cache"],
   "compilerOptions": {
     "target": "esnext",
-    "module": "esnext",
+    "module": "NodeNext",
     "lib": ["dom", "esnext"],
     /* "allowJs": true, */
     /* "checkJs": true, */
@@ -16,10 +16,11 @@
     "emitDecoratorMetadata": true,
     "noEmit": true,
     "skipLibCheck": true,
-    "moduleResolution": "node",
+    "moduleResolution": "node16",
     "baseUrl": "./src",
     "paths": {
-      "@/*": ["./*"]
+      "@/*": ["./*"],
+      "react": [ "./node_modules/@types/react" ]
     }
   }
 }
