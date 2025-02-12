@@ -1,6 +1,12 @@
 import * as React from 'react'
+import { ReactNode } from 'react'
 
-const Left = ({ children, ...delegated }) => {
+interface LeftProps {
+  children?: ReactNode
+}
+
+const Left = ({ children, ...delegated }: LeftProps) => {
+
   return (
     <>
       <div className="justify-left flex items-stretch" {...delegated}>

@@ -1,10 +1,10 @@
 import * as React from 'react'
 import { ReactNode, FC } from 'react'
-import { Disclosure } from '@headlessui/react'
+import { Disclosure, DisclosurePanel, DisclosureButton } from '@headlessui/react'
 import { ChevronDownIcon } from '@heroicons/react/24/solid'
 import { useInView } from 'react-intersection-observer'
 import { LazyMotion, m } from 'framer-motion'
-
+// @ts-ignore
 const loadFeatures = () => import('@/components/FramerFeatures').then((res) => res.default)
 
 interface SingleAccordionProps {
@@ -54,13 +54,13 @@ const SingleAccordion: FC<SingleAccordionProps> = (props) => {
                 <Disclosure>
                   {({ open }) => (
                     <>
-                      <Disclosure.Button className="flex w-full justify-between rounded-lg bg-slate-300 px-4 py-2 text-left text-sm font-medium text-slate-200 hover:bg-slate-200 focus:outline-none focus-visible:ring focus-visible:ring-purple-500 focus-visible:ring-opacity-75 dark:bg-slate-900 dark:text-slate-200 dark:hover:bg-slate-800">
+                      <DisclosureButton className="flex w-full justify-between rounded-lg bg-slate-300 px-4 py-2 text-left text-sm font-medium text-slate-200 hover:bg-slate-200 focus:outline-none focus-visible:ring focus-visible:ring-purple-500 focus-visible:ring-opacity-75 dark:bg-slate-900 dark:text-slate-200 dark:hover:bg-slate-800">
                         <span className="text-lg">{label}</span>
                         <ChevronDownIcon
                           className={`${open ? 'rotate-180 transform' : ''} mt-1 h-5 w-5 text-slate-300`}
                         />
-                      </Disclosure.Button>
-                      <Disclosure.Panel className="text-md px-4 pb-2 pt-4 text-slate-300">{children}</Disclosure.Panel>
+                      </DisclosureButton>
+                      <DisclosurePanel className="text-md px-4 pb-2 pt-4 text-slate-300">{children}</DisclosurePanel>
                     </>
                   )}
                 </Disclosure>

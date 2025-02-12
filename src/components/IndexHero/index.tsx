@@ -4,7 +4,8 @@ import * as React from 'react'
 import { useState } from 'react'
 import { LazyMotion, m } from 'framer-motion'
 import AnimatedText from '@/components/AnimatedCharacters'
-
+import { StaticImage } from 'gatsby-plugin-image'
+// @ts-ignore
 const loadFeatures = () => import('@/components/FramerFeatures').then((res) => res.default)
 
 interface IndexHeroProps {

@@ -1,7 +1,7 @@
 import * as React from 'react'
 import { useInView } from 'react-intersection-observer'
 import { LazyMotion, m } from 'framer-motion'
-
+// @ts-ignore
 const loadFeatures = () => import('@/components/FramerFeatures').then((res) => res.default)
 
 const WavyHr = () => {

@@ -1,6 +1,13 @@
 import * as React from 'react'
+import { ReactNode, FC } from 'react'
 
-const Center = ({ children, ...delegated }) => {
+interface CenterProps {
+  children?: ReactNode
+}
+
+const Center: FC<CenterProps> = props => {
+  const { children, ...delegated } = props
+
   return (
     <>
       <div

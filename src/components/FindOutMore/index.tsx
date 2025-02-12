@@ -8,7 +8,7 @@ import { OutboundLink } from 'gatsby-plugin-google-gtag'
 
 const callouts = [
   {
-    name: 'Gatsby v5.14.0',
+    name: 'Gatsby v5.14.1',
     description: 'Gatsby is a React-based open-source framework for creating websites and apps.',
     imageSrc: GatsbyImage,
     imageAlt: 'Gatsby drawing',

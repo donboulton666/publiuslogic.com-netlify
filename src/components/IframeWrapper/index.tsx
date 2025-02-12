@@ -1,11 +1,12 @@
 import * as React from 'react'
-import { ReactNode } from 'react'
+import { ReactNode, FC } from 'react'
 
-interface Props {
+interface IframeWrapperProps {
   children?: ReactNode
 }
 
-const IframeWrapper = ({ children, ...delegated }) => {
+const IframeWrapper: FC<IframeWrapperProps> = props => {
+  const { children, ...delegated } = props
   return (
     <>
       <div

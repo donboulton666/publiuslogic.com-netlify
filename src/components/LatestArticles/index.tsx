@@ -4,8 +4,9 @@ import { Link } from 'gatsby'
 import GetPosts from '@/utils/getposts'
 import { SuspenseHelper } from '@/components/SuspenseHelper'
 import Section from '@/components/Section'
-
+// @ts-ignore
 const Tags = React.lazy(() => import('@/components/SiteTags'))
+// @ts-ignore
 const WavyHr = React.lazy(() => import('@/components/WavyHr'))
 
 export default function LatestArticles() {

@@ -10,7 +10,7 @@ const VideoFifteen = () => {
   const vid = new CloudinaryVideo('videos/_Epstein_SECRET_AUDIO_on_Trump_LEAKS_and_IT_S_BAD', {
     cloudName: 'mansbooks',
   })
-  const videoEl = useRef()
+  const videoEl = useRef(null)
   const sources = [
     {
       type: 'mp4',

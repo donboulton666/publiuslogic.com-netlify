@@ -1,8 +1,11 @@
 import * as React from 'react'
 import { useRef } from 'react'
 import { AdvancedVideo, lazyload } from '@cloudinary/react'
+// @ts-ignore
 import { CloudinaryVideo } from '@cloudinary/url-gen'
+// @ts-ignore
 import { videoCodec } from '@cloudinary/url-gen/actions/transcode'
+// @ts-ignore
 import { auto, vp9 } from '@cloudinary/url-gen/qualifiers/videoCodec'
 import VideoWrapper from './wrapper'
 

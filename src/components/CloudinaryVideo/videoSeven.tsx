@@ -1,8 +1,11 @@
 import * as React from 'react'
 import { useRef } from 'react'
 import { AdvancedVideo, lazyload } from '@cloudinary/react'
+// @ts-ignore
 import { CloudinaryVideo } from '@cloudinary/url-gen'
+// @ts-ignore
 import { videoCodec } from '@cloudinary/url-gen/actions/transcode'
+// @ts-ignore
 import { auto, vp9 } from '@cloudinary/url-gen/qualifiers/videoCodec'
 import VideoWrapper from './wrapper'
 
@@ -10,7 +13,7 @@ const VideoSeven = () => {
   const vid = new CloudinaryVideo('videos/WITCH-HUNT__Scream_Actress_FIRED_For_Palestine_Posts', {
     cloudName: 'mansbooks',
   })
-  const videoEl = useRef(undefined)
+  const videoEl = useRef(null)
   const sources = [
     {
       type: 'mp4',

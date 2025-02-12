@@ -1,7 +1,7 @@
 import * as React from 'react'
 import { StaticImage } from 'gatsby-plugin-image'
 import clsx from 'clsx'
-import { Disclosure, Menu, Transition } from '@headlessui/react'
+import { Menu, MenuItem, MenuItems, MenuButton, Transition } from '@headlessui/react'
 import { MusicalNoteIcon } from '@heroicons/react/24/outline'
 import { OutboundLink } from 'gatsby-plugin-google-gtag'
 
@@ -45,7 +45,7 @@ const Stacked = () => {
         alt="Image Description"
       />
       <Menu as="div" className="relative ml-1 inline-flex">
-        <Menu.Button className="flex rounded-full text-sm focus:outline-none">
+        <MenuButton className="flex rounded-full text-sm focus:outline-none">
           <span className="sr-only">Open Control Menu</span>
           <span
             className="inline-flex h-12 w-12 items-center justify-center rounded-full border-2 border-white bg-white align-middle text-sm font-medium text-gray-700 shadow-sm transition-all hover:bg-gray-300 focus:bg-blue-100 focus:text-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-offset-2 focus:ring-offset-white dark:border-gray-800 dark:bg-gray-700 dark:text-gray-400 dark:hover:bg-gray-600 dark:hover:text-white dark:focus:bg-blue-100 dark:focus:text-blue-600 dark:focus:ring-offset-gray-800"
@@ -53,7 +53,7 @@ const Stacked = () => {
             aria-label="Old Enough"
           />
           <span className="font-medium leading-none">9+</span>
-        </Menu.Button>
+        </MenuButton>
         <Transition
           enter="transition ease-out duration-100"
           enterFrom="transform opacity-0 scale-95"
@@ -62,12 +62,12 @@ const Stacked = () => {
           leaveFrom="transform opacity-100 scale-100"
           leaveTo="transform opacity-0 scale-95"
         >
-          <Menu.Items className="ring-black absolute right-0 mt-3 w-48 origin-top-right rounded-md bg-slate-900 py-1 text-slate-200 opacity-75 shadow-lg ring-1 ring-opacity-5 hover:opacity-100 focus:outline-none">
-            <Menu.Item>
+          <MenuItems className="ring-black absolute right-0 mt-3 w-48 origin-top-right rounded-md bg-slate-900 py-1 text-slate-200 opacity-75 shadow-lg ring-1 ring-opacity-5 hover:opacity-100 focus:outline-none">
+            <MenuItem>
               {({ active }) => (
                 <OutboundLink
                   aria-label="Login"
-                  to="/login"
+                  href="/login"
                   className={clsx(
                     active ? 'bg-slate-700' : '',
                     'ml-2 mr-2 block rounded-md px-3 py-2 text-lg font-medium hover:bg-slate-600/30 hover:text-slate-300'
@@ -83,12 +83,12 @@ const Stacked = () => {
                   </span>
                 </OutboundLink>
               )}
-            </Menu.Item>
-            <Menu.Item>
+            </MenuItem>
+            <MenuItem>
               {({ active }) => (
                 <OutboundLink
                   aria-label="Old Enough"
-                  to="/old-enough"
+                  href="/old-enough"
                   className={clsx(
                     active ? 'bg-slate-700' : '',
                     'ml-2 mr-2 block rounded-md px-3 py-2 text-lg font-medium hover:bg-slate-600/30 hover:text-slate-300'
@@ -100,11 +100,11 @@ const Stacked = () => {
                   </span>
                 </OutboundLink>
               )}
-            </Menu.Item>
-            <Menu.Item>
+            </MenuItem>
+            <MenuItem>
               {({ active }) => (
                 <OutboundLink
-                  to="/profile"
+                  href="/profile"
                   aria-label="Profile Button"
                   className={clsx(
                     active ? 'bg-slate-700' : '',
@@ -117,8 +117,8 @@ const Stacked = () => {
                   </span>
                 </OutboundLink>
               )}
-            </Menu.Item>
-          </Menu.Items>
+            </MenuItem>
+          </MenuItems>
         </Transition>
       </Menu>
     </div>

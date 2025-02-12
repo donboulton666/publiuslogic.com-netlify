@@ -1,10 +1,10 @@
 import * as React from 'react'
-import { Disclosure } from '@headlessui/react'
+import { Disclosure, DisclosureButton, DisclosurePanel } from '@headlessui/react'
 import { ChevronDownIcon } from '@heroicons/react/24/solid'
 import { useInView } from 'react-intersection-observer'
 import { LazyMotion, m } from 'framer-motion'
 import Center from '@/components/Center'
-
+// @ts-ignore
 const loadFeatures = () => import('@/components/FramerFeatures').then((res) => res.default)
 
 const Accordion = () => {
@@ -45,13 +45,13 @@ const Accordion = () => {
                 <Disclosure>
                   {({ open }) => (
                     <>
-                      <Disclosure.Button className="flex w-full justify-between rounded-lg bg-slate-300 px-4 py-2 text-left text-sm font-medium text-slate-200 hover:bg-slate-200 focus:outline-none focus-visible:ring focus-visible:ring-purple-500 focus-visible:ring-opacity-75 dark:bg-slate-900 dark:text-slate-200 dark:hover:bg-slate-800">
+                      <DisclosureButton className="flex w-full justify-between rounded-lg bg-slate-300 px-4 py-2 text-left text-sm font-medium text-slate-200 hover:bg-slate-200 focus:outline-none focus-visible:ring focus-visible:ring-purple-500 focus-visible:ring-opacity-75 dark:bg-slate-900 dark:text-slate-200 dark:hover:bg-slate-800">
                         <span className="text-lg">Lyrics Suspicious Minds</span>
                         <ChevronDownIcon
                           className={`${open ? 'rotate-180 transform' : ''} mt-1 h-5 w-5 text-slate-300`}
                         />
-                      </Disclosure.Button>
-                      <Disclosure.Panel className="text-md px-4 pb-2 pt-4 text-slate-200">
+                      </DisclosureButton>
+                      <DisclosurePanel className="text-md px-4 pb-2 pt-4 text-slate-200">
                         <div className="text-md">
                           Only change in song is verse 1, to, "Heart of a Child", from, "We're are caught in a trap
                         </div>
@@ -102,20 +102,20 @@ const Accordion = () => {
                         <div>I'll dry the tears from your eyes</div>
                         <div>Let's don't let a good thing die When, honey,</div>
                         <div>you know I've never lied to you.</div>
-                      </Disclosure.Panel>
+                      </DisclosurePanel>
                     </>
                   )}
                 </Disclosure>
                 <Disclosure as="div" className="mt-2">
                   {({ open }) => (
                     <>
-                      <Disclosure.Button className="flex w-full justify-between rounded-lg bg-slate-300 px-4 py-2 text-left text-sm font-medium text-slate-200 hover:bg-slate-200 focus:outline-none focus-visible:ring focus-visible:ring-purple-500 focus-visible:ring-opacity-75 dark:bg-slate-900 dark:text-slate-200 dark:hover:bg-slate-800">
+                      <DisclosureButton className="flex w-full justify-between rounded-lg bg-slate-300 px-4 py-2 text-left text-sm font-medium text-slate-200 hover:bg-slate-200 focus:outline-none focus-visible:ring focus-visible:ring-purple-500 focus-visible:ring-opacity-75 dark:bg-slate-900 dark:text-slate-200 dark:hover:bg-slate-800">
                         <span className="text-lg">Credits</span>
                         <ChevronDownIcon
                           className={`${open ? 'rotate-180 transform' : ''} mt-1 h-5 w-5 text-slate-300`}
                         />
-                      </Disclosure.Button>
-                      <Disclosure.Panel className="text-md px-4 pb-2 pt-4 text-slate-200">
+                      </DisclosureButton>
+                      <DisclosurePanel className="text-md px-4 pb-2 pt-4 text-slate-800">
                         <div>
                           <div>
                             <span className="mb-1" variant="secondary">
@@ -148,7 +148,7 @@ const Accordion = () => {
                             </span>
                           </div>
                         </div>
-                      </Disclosure.Panel>
+                      </DisclosurePanel>
                     </>
                   )}
                 </Disclosure>

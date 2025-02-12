@@ -1,6 +1,11 @@
 import * as React from 'react'
+import { ReactNode } from 'react'
 
-const LeftText = ({ children, ...delegated }) => {
+interface LeftTextProps {
+  children?: ReactNode
+}
+
+const LeftText = ({ children, ...delegated }: LeftTextProps) => {
   return (
     <>
       <div

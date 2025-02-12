@@ -2,7 +2,7 @@ import * as React from 'react'
 import { LazyMotion, m } from 'framer-motion'
 import { useInView } from 'react-intersection-observer'
 import { ClockIcon, SparklesIcon, PuzzlePieceIcon, PresentationChartBarIcon } from '@heroicons/react/24/outline'
-
+// @ts-ignore
 const loadFeatures = () => import('@/components/FramerFeatures').then((res) => res.default)
 
 const features = [

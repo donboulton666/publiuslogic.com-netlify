@@ -1,14 +1,17 @@
 import * as React from 'react'
 import { useRef } from 'react'
 import { AdvancedVideo, lazyload } from '@cloudinary/react'
+// @ts-ignore
 import { CloudinaryVideo } from '@cloudinary/url-gen'
+// @ts-ignore
 import { videoCodec } from '@cloudinary/url-gen/actions/transcode'
+// @ts-ignore
 import { auto, vp9 } from '@cloudinary/url-gen/qualifiers/videoCodec'
 import VideoWrapper from './wrapper'
 
 const Love = () => {
   const vid = new CloudinaryVideo('videos/Angelina_Jordan_New_Single_angelinajordan', { cloudName: 'mansbooks' })
-  const videoEl = useRef(undefined)
+  const videoEl = useRef(null)
   const sources = [
     {
       type: 'mp4',

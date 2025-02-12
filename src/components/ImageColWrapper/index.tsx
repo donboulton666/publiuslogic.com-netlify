@@ -5,7 +5,7 @@ interface ImageColWrapperProps {
   children?: ReactNode
 }
 
-const ImageColWrapperPage = ({ children }: ImageColWrapperPageProps) => {
+const ImageColWrapperPage = ({ children }: ImageColWrapperProps) => {
   return (
     <>
       <div className="mb-4 mt-4 flex content-center justify-center">{children}</div>

@@ -1,6 +1,12 @@
 import * as React from 'react'
+import { ReactNode, FC } from 'react'
 
-const CenterItem = ({ children, ...delegated }) => {
+interface CenterItemProps {
+  children?: ReactNode
+}
+
+const CenterItem: FC<CenterItemProps> = props => {
+  const { children, ...delegated } = props
   return (
     <>
       <div className="center items-stretch" {...delegated}>

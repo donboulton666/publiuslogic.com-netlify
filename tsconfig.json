@@ -3,7 +3,7 @@
   "exclude": ["node_modules", "public", ".cache"],
   "compilerOptions": {
     "target": "esnext",
-    "module": "NodeNext",
+    "module": "nodenext",
     "lib": ["dom", "esnext"],
     /* "allowJs": true, */
     /* "checkJs": true, */
@@ -16,7 +16,7 @@
     "emitDecoratorMetadata": true,
     "noEmit": true,
     "skipLibCheck": true,
-    "moduleResolution": "node16",
+    "moduleResolution": "NodeNext",
     "baseUrl": "./src",
     "paths": {
       "@/*": ["./*"],

@@ -1,7 +1,15 @@
 import * as React from 'react'
+import { ReactNode, FC } from 'react'
 
-const Title = (props) => {
-  const { text, children, className } = props
+interface TitleProps {
+  children?: ReactNode
+  text: string
+  className: string
+}
+
+const Title: FC<TitleProps> = props => {
+  const { children, text, className } = props
+
   return (
     <div
       className={className}
@@ -20,7 +28,7 @@ const Title = (props) => {
     >
       <div
         style={{
-          fontSize: [2, 3],
+          fontSize: 'small',
           fontFamily: 'heading',
           lineHeight: 'heading',
           margin: '0',
@@ -32,7 +40,6 @@ const Title = (props) => {
       <div
         className="gatsby-highlight"
         style={{
-          bg: 'highlight',
           background: 'highlight',
           padding: '4px 6px',
           color: 'white',

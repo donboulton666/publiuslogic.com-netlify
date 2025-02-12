@@ -10,7 +10,7 @@ const VideoEleven1 = () => {
   const vid = new CloudinaryVideo('videos/Tupac_Talks_Donald_Trump_Greed_in_America_in_1992_Interview___MTV_News', {
     cloudName: 'mansbooks',
   })
-  const videoEl = useRef()
+  const videoEl = useRef(null)
   const sources = [
     {
       type: 'mp4',

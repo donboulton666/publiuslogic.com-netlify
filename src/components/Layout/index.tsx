@@ -5,10 +5,15 @@ import { CookieConsent } from 'react-cookie-consent'
 import { SuspenseHelper } from '@/components/SuspenseHelper'
 import Stars from '@/components/Stars'
 
+// @ts-ignore
 const Header = React.lazy(() => import('@/components/Header'))
+// @ts-ignore
 const Footer = React.lazy(() => import('@/components/Footer'))
+// @ts-ignore
 const ToTop = React.lazy(() => import('@/components/ToTop'))
+// @ts-ignore
 const ToBottom = React.lazy(() => import('@/components/ToBottom'))
+// @ts-ignore
 const ScrollIndicator = React.lazy(() => import('@/components/ScrollIndicator'))
 
 interface LayoutProps {

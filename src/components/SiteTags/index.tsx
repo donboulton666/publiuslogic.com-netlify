@@ -8,7 +8,7 @@ interface TagsProps {
 }
 
 const Tags = ({ tags }: TagsProps) => {
-  const ref = useRef(undefined)
+  const ref = useRef(null)
   return (
     <div className="flex flex-row flex-wrap items-start gap-2">
       {tags.map((tag) => (
