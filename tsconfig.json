@@ -3,7 +3,7 @@
   "exclude": ["node_modules", "public", ".cache"],
   "compilerOptions": {
     "target": "esnext",
-    "module": "nodenext",
+    "module": "NodeNext",
     "lib": ["dom", "esnext"],
     /* "allowJs": true, */
     /* "checkJs": true, */

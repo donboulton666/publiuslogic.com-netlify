@@ -113,7 +113,7 @@ export default {
                 roman: 'upper-roman',
               },
               a: {
-                color: theme('colors.gray.200'),
+                color: theme('colors.gray.300'),
                 textDecoration: null,
                 '&:hover': {
                   textDecoration: 'underline',
