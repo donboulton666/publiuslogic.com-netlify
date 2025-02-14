@@ -39,6 +39,7 @@ const godNavigation = [
 const logicNavigation = [
   { name: 'Donald Tom Elon', href: '/blog/donald-tom-elon', current: false },
   { name: 'Fair and Square', href: '/blog/fair-and-square', current: false },
+  { name: 'Fourteenth Amendment', href: '/blog/fourteenth-amendment', current: false },
   { name: 'Bullshit', href: '/blog/bullshit', current: false },
   { name: 'Government', href: '/blog/government', current: false },
   { name: 'Homeless', href: '/blog/homeless', current: false },

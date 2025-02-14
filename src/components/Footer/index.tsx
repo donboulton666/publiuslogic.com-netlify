@@ -289,7 +289,7 @@ export default function Footer() {
                         rel="noopener noreferrer"
                         target="_blank"
                         area-label="Github"
-                        href="https://www.github.com/donaldboulton"
+                        href="https://github.com/donboulton666"
                       >
                         Github
                       </OutboundLink>

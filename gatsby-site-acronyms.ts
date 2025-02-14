@@ -38,6 +38,7 @@ export default {
   HTML: 'Hypertext Markup Language',
   HTTP: 'Hypertext Transfer Protocol',
   HTTPS: 'HTTP Secure',
+  ICE: 'Immigration and Customs Enforcement',
   IE: 'Internet Explorer',
   IO: 'Input/Output',
   ISP: 'Internet Service Providers',
