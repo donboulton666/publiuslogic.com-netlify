@@ -8,8 +8,18 @@ import { LazyMotion, m, useInView } from 'framer-motion'
 import { CalendarIcon, UserCircleIcon } from '@heroicons/react/24/outline'
 import GetPosts from '@/utils/getposts'
 import Tags from '@/components/SiteTags'
+import { IGatsbyImageData } from 'gatsby-plugin-image'
 
+// @ts-ignore
 const loadFeatures = () => import('@/components/FramerFeatures').then((res) => res.default)
+
+interface ImageProp {
+  embeddedImagesLocal: IGatsbyImageData
+  imgClass?: string
+  thumbAlt?: string
+  title?: string
+  caption?: string
+}
 
 interface BlogRollProps {
   tag?: string
@@ -19,7 +29,7 @@ interface BlogRollProps {
   path: string
   author: string
   date: string
-  imageLink: string
+  embeddedImagesLocal: ImageProp[]
   tags: string[]
   categories: string[]
   excerpt: string

@@ -14,7 +14,7 @@ const postQuery = graphql`
           author
           embeddedImagesLocal {
             childImageSharp {
-              gatsbyImageData
+              gatsbyImageData(placeholder: BLURRED)
             }
           }
           date(formatString: "YYYY-MM-DD")
@@ -29,7 +29,7 @@ const postQuery = graphql`
   }
 `
 interface ImageProp {
-  embeddedImagesLocal: ImageProp[]
+  embeddedImagesLocal: IGatsbyImageData
   imgClass?: string
   thumbAlt?: string
   title?: string

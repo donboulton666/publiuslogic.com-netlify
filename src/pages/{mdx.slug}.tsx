@@ -2,21 +2,24 @@ import * as React from 'react'
 import { useRef, forwardRef, FC } from 'react'
 import type { HeadProps } from 'gatsby'
 import { graphql } from 'gatsby'
+import { IGatsbyImageData } from "gatsby-plugin-image";
 import { MDXRenderer } from 'gatsby-plugin-mdx'
 import Layout from '@/components/Layout'
 import PageTransition from '@/components/PageTransition'
 import { CalendarIcon, ClockIcon, TagIcon } from '@heroicons/react/24/outline'
 import NowPlaying from '@/components/PlayList'
 import SeoBlog from '@/components/Seo/SeoBlog'
-import ImageColWrapperPage from '@/components/ImageColWrapper'
 import { SuspenseHelper } from '@/components/SuspenseHelper'
 
+// @ts-ignore
 const Bio = React.lazy(() => import('@/components/Bio'))
+// @ts-ignore
 const Tags = React.lazy(() => import('@/components/SiteTags'))
+// @ts-ignore
 const WavyHr = React.lazy(() => import('@/components/WavyHr'))
 
 interface ImageProp {
-  image: GatsbyImageData
+  image: IGatsbyImageData
   full: IGatsbyImageData
   thumb: IGatsbyImageData
   imgClass?: string
@@ -26,34 +29,7 @@ interface ImageProp {
   customWrapper?: FC
 }
 
-type DataProps = {
-  data: {
-    mdx: {
-      frontmatter: {
-        title: string
-        description: string
-        author: string
-        path: string
-        date: string
-        embeddedImagesLocal: ImageProp[]
-        tags: string[]
-        publicId: string
-        videoTitle: string
-      }
-      slug: string
-      excerpt: string
-      parent: {
-        modifiedTime: string
-      }
-      body: string
-      tableOfContents: JSON
-      pathname: string
-      timeToRead: string
-    }
-  }
-}
-
-interface MdxProps {
+interface BlogPostProps {
   data: {
     mdx: {
       frontmatter: {
@@ -82,13 +58,14 @@ interface MdxProps {
 
 type BlogPostRef = React.ForwardedRef<HTMLDivElement>
 
-function BlogPost({ data }: MdxProps<DataProps>, ref: BlogPostRef) {
-  const { frontmatter, timeToRead, id, customWrapper = ImageColWrapperPage, imgClass = '' } = data.mdx
+function BlogPost({ data }: BlogPostProps, ref: BlogPostRef) {
+  const { frontmatter, timeToRead } = data.mdx
   const pathname = '/' + data.mdx.slug
+  const pageRef = useRef(null)
   return (
     <>
       <Layout>
-        <PageTransition ref={ref}>
+        <PageTransition ref={pageRef}>
           <div className="left-beams -mt-10 object-cover">
             <div className="mb-20 mt-10 font-inter">
               <section className="prose-text:text-slate-900 prose-text:dark:text-slate-200 prose mx-auto mb-10 mt-2 max-w-screen-lg px-4 md:prose-lg lg:prose-xl prose-a:text-purple-600 hover:prose-a:text-purple-500 lg:px-0">
@@ -140,6 +117,33 @@ function BlogPost({ data }: MdxProps<DataProps>, ref: BlogPostRef) {
 }
 
 export default forwardRef(BlogPost)
+
+interface DataProps {
+  data: {
+    mdx: {
+      frontmatter: {
+        title: string
+        description: string
+        author: string
+        path: string
+        date: string
+        embeddedImagesLocal: ImageProp[]
+        tags: string[]
+        publicId: string
+        videoTitle: string
+      }
+      slug: string
+      excerpt: string
+      parent: {
+        modifiedTime: string
+      }
+      body: string
+      tableOfContents: JSON
+      pathname: string
+      timeToRead: string
+    }
+  }
+}
 
 /* eslint-disable-next-line @typescript-eslint/no-unused-vars */
 export function Head(props: HeadProps<DataProps>) {
@@ -198,7 +202,7 @@ export function Head(props: HeadProps<DataProps>) {
           copyrightHolder: {
             '@id': 'https://publiuslogic.com',
           },
-          copyrightYear: 2023,
+          copyrightYear: 2025,
           creator: {
             '@id': 'https://publiuslogic.com',
           },
