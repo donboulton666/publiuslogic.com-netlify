@@ -55,7 +55,7 @@
     "encoding": "^0.1.13",
     "framer-motion": "^11.1.8",
     "ga-gtag": "^1.2.0",
-    "gatsby": "^5.14.1",
+    "gatsby": "^5.14.2",
     "gatsby-adapter-netlify": "^1.2.0",
     "gatsby-plugin-algolia": "^1.0.3",
     "gatsby-plugin-babel-optional-chaining": "^1.0.0",
