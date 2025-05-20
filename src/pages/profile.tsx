@@ -1,5 +1,5 @@
 import * as React from 'react'
-import { forwardRef } from 'react'
+import { forwardRef, useState } from 'react'
 import { Link } from 'gatsby'
 import type { HeadProps } from 'gatsby'
 import Layout from '@/components/Layout'
@@ -7,7 +7,6 @@ import PageTransition from '@/components/PageTransition'
 import WavyHr from '@/components/WavyHr'
 import Seo from '@/components/Seo'
 import { StaticImage } from 'gatsby-plugin-image'
-import Image from '../../static/svg/undraw/undraw_account_re_o7id.svg'
 import OGImage from '../../static/images/undraw/undraw_Account_re_o7id.png'
 import Spacer200 from '../../static/img/spacer-200.jpg'
 import PageHero from '@/components/PageHero'
@@ -21,7 +20,58 @@ const ogimage = {
 
 type ProfileRef = React.ForwardedRef<HTMLDivElement>
 
+const imageCdn = 'https://donboulton666.github.io/image-cdn/images/img/angie.jpg';
+
 function Profile(props, ref: ProfileRef) {
+  const [selectedFile, setSelectedFile] = useState(null);
+  const handleFileChange = (event) => {
+    setSelectedFile(event.target.files[0]);
+  };
+
+  const handleUpload = async () => {
+    if (!selectedFile) {
+      alert('Please select a file first!');
+      return;
+    }
+
+    const GITHUB_TOKEN = 'YOUR_GITHUB_TOKEN';
+    const GITHUB_USERNAME = 'YOUR_GITHUB_USERNAME';
+    const GITHUB_REPO = 'YOUR_GITHUB_REPO';
+    const GITHUB_BRANCH = 'main'; // or your branch name
+    const FILE_PATH = `uploads/${selectedFile.name}`; // path in the repository
+
+    try {
+      const reader = new FileReader();
+      reader.onload = async (event) => {
+        const fileContent = event.target.result;
+
+        const url = `https://api.github.com/repos/${GITHUB_USERNAME}/${GITHUB_REPO}/contents/${FILE_PATH}`;
+
+        const response = await fetch(url, {
+          method: 'PUT',
+          headers: {
+            Authorization: `token ${GITHUB_TOKEN}`,
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({
+            message: `Upload ${selectedFile.name}`,
+            content: btoa(fileContent), // encode to base64
+            branch: GITHUB_BRANCH,
+          }),
+        });
+
+        if (response.ok) {
+          alert('File uploaded successfully!');
+        } else {
+          const errorData = await response.json();
+          alert(`Error uploading file: ${errorData.message || response.statusText}`);
+        }
+      };
+      reader.readAsBinaryString(selectedFile);
+    } catch (error) {
+      alert(`An unexpected error occurred: ${error.message}`);
+    }
+  };
   const spacer200 = {
     src: Spacer200,
     width: 1400,
@@ -114,10 +164,6 @@ function Profile(props, ref: ProfileRef) {
                   </div>
                 </div>
               </div>
-              <div
-                image={spacer200}
-                className="absolute right-0 mb-10 mt-20 w-full overflow-hidden bg-transparent pt-10"
-              ></div>
               <div className="mt-2">
                 <div className="pointer-events-none absolute left-1/2 right-0 top-96 mt-10 w-full -translate-x-1/2 scale-x-[-1] transform overflow-hidden bg-transparent pt-10 transition-all duration-200">
                   <svg
@@ -143,14 +189,49 @@ function Profile(props, ref: ProfileRef) {
                     quality={95}
                     alt="Buy me a coffee"
                     area-label="Buy me a coffee"
-                    loading="Buy me a coffee"
+                    loading="lazy"
                   />
                 </OutboundLink>
               </div>
               <div className="center container mx-auto mb-20 px-5 py-2 lg:px-32 lg:pt-12">
-                <WavyHr className="text-indigo-600" />
+               <div className="mx-auto space-x-1 overflow-hidden p-1">
+                <span className="group relative flex items-center text-slate-200">
+                  <div className="pointer-events-none absolute inset-y-0 left-0 flex items-center rounded-l-md border border-r-0 border-gray-400 bg-gray-200 pl-3 pr-3 text-gray-900 dark:border-gray-800 dark:bg-gray-800 dark:text-gray-400">
+                    <svg
+                      width="20"
+                      height="20"
+                      fill="currentColor"
+                      className="h-5 w-5 text-gray-500 dark:text-gray-400"
+                      aria-hidden="true"
+                      viewBox="0 0 512 512"
+                    >
+                      <path d="M464 4.3L16 262.7C-7 276-4.7 309.9 19.8 320L160 378v102c0 30.2 37.8 43.3 56.7 20.3l60.7-73.8 126.4 52.2c19.1 7.9 40.7-4.2 43.8-24.7l64-417.1C515.7 10.2 487-9 464 4.3zM192 480v-88.8l54.5 22.5L192 480zm224-30.9l-206.2-85.2 199.5-235.8c4.8-5.6-2.9-13.2-8.5-8.4L145.5 337.3 32 290.5 480 32l-64 417.1z"></path>
+                    </svg>
+                  </div>
+                  <input
+                    type="file"
+                    placeholder="image"
+                    className="w-48 appearance-none rounded border-slate-800 bg-slate-300 p-2.5 px-4 py-3 pl-14 leading-tight text-slate-900 focus:border-wine-300 focus:outline-none focus:ring-slate-500 dark:bg-slate-700 dark:text-slate-200"
+                    aria-label="Enter Email"
+                    onChange={handleFileChange}
+                  />
+                  <span className="block space-x-2">
+                    <button
+                      aria-label="Submit Button"
+                      className="ml-2 rounded-md border border-transparent bg-gray-800 p-2 text-sm font-medium text-slate-200 shadow-lg hover:bg-gray-900 hover:shadow-slate-800/50"
+                      type="submit"
+                      onClick={handleUpload} disabled={!selectedFile}
+                    >
+                      Upload Image
+                    </button>
+                  </span>
+                </span>
+              </div>
               </div>
             </section>
+          </div>
+          <div>            
+            <img src={imageCdn} alt="Angie"></img>
           </div>
         </PageTransition>
       </Layout>

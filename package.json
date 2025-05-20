@@ -112,6 +112,7 @@
     "remark-slug": "^7.0.1",
     "sharp": "^0.33.4",
     "tsparticles": "^3.4.0",
+    "use-image": "^1.1.1",
     "use-isomorphic-layout-effect": "^1.2.0",
     "use-local-storage": "^3.0.0",
     "use-sound": "^4.0.3",
