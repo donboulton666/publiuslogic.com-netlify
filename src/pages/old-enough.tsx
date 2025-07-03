@@ -1,16 +1,12 @@
 import * as React from 'react'
 import { useRef, forwardRef } from 'react'
-import ReactPlayer from 'react-player/youtube'
+import ReactPlayer from 'react-player'
 import type { HeadProps } from 'gatsby'
-import { StaticImage } from 'gatsby-plugin-image'
 import { Link } from 'gatsby'
 import PageTransition from '@/components/PageTransition'
 import Layout from '@/components/Layout'
 import Seo from '@/components/Seo'
-import LeftText from '@/components/LeftText'
-import Image from '../../static/svg/undraw/undraw_super_thank_you_re_f8bo.svg'
 import OGImage from '../../static/images/undraw/undraw_Super_thank_you_re_f8bo.png'
-import HeaderPopover from '@/components/HeaderPopover'
 import IframeWrapper from '@/components/IframeWrapper'
 import IframeWrapperLarge from '@/components/IframeWrapperLarge'
 
@@ -45,7 +41,7 @@ function OldEnough(props, ref: OldEnoughRef) {
                     <IframeWrapper>
                       <ReactPlayer
                         ref={refSmall}
-                        url="https://www.youtube.com/embed/videoseries?si=3WDvhcx37RPUqyZC&amp;list=PLTa09znYPWvKpWlZAAF3v2KEa4b7_tMBf"
+                        src="https://www.youtube.com/embed/videoseries?si=3WDvhcx37RPUqyZC&amp;list=PLTa09znYPWvKpWlZAAF3v2KEa4b7_tMBf"
                         width="100%"
                         height="100%"
                         controls={true}
@@ -72,7 +68,7 @@ function OldEnough(props, ref: OldEnoughRef) {
                   <IframeWrapperLarge>
                     <ReactPlayer
                       ref={refPlayer}
-                      url="https://www.youtube.com/embed/8BXCVY_-RmU"
+                      src="https://www.youtube.com/embed/8BXCVY_-RmU"
                       height="100%"
                       width="100%"
                       controls={true}
