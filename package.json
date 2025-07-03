@@ -111,7 +111,6 @@
     "remark-slug": "^7.0.1",
     "sharp": "^0.34.2",
     "tsparticles": "^3.8.1",
-    "tsparticles-engine": "^2.12.0",
     "use-image": "^1.1.1",
     "use-isomorphic-layout-effect": "^1.2.0",
     "use-local-storage": "^3.0.0",
