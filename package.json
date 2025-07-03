@@ -1,9 +1,9 @@
 {
   "name": "publiuslogic",
-  "private": false,
   "description": "To Publius Logic",
   "version": "1.0.0",
   "author": "Donald Boulton",
+  "packageManager": "yarn@4.9.2",
   "bugs": {
     "url": "https://github.com/donaldboulton/publiuslogic.com/issues"
   },
@@ -55,7 +55,7 @@
     "encoding": "^0.1.13",
     "framer-motion": "^11.1.8",
     "ga-gtag": "^1.2.0",
-    "gatsby": "^5.14.2",
+    "gatsby": "^5.14.5",
     "gatsby-adapter-netlify": "^1.2.0",
     "gatsby-plugin-algolia": "^1.0.3",
     "gatsby-plugin-babel-optional-chaining": "^1.0.0",
@@ -187,9 +187,9 @@
     "deploy": "gatsby build && gh-pages -d public -b main"
   },
   "engines": {
-    "node": ">=22.13.1"
+    "node": ">=24.3.0"
   },
   "AWS_LAMBDA_JS_RUNTIME": {
-    "node": ">=22.13.1"
+    "node": ">=24.3.0"
   }
 }
