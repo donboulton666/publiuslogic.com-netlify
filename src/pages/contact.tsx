@@ -2,6 +2,7 @@ import * as React from 'react'
 import { useRef, forwardRef } from 'react'
 import type { HeadProps } from 'gatsby'
 import Layout from '@/components/Layout'
+import { Link } from 'gatsby'
 import PageTransition from '@/components/PageTransition'
 import Seo from '@/components/Seo'
 import PageHero from '@/components/PageHero'
@@ -13,7 +14,6 @@ import WavyHr from '@/components/WavyHr'
 import LeftText from '@/components/LeftText'
 import Map from '@/components/Map'
 import ContactForm from '@/components/ContactForm'
-import { OutboundLink } from 'gatsby-plugin-google-gtag'
 
 const ogimage = {
   src: OGImage,
@@ -57,16 +57,16 @@ function Contact(props, ref: ContactRef) {
                                 quality={95}
                                 alt="Profile picture"
                               />
-                              <OutboundLink
+                              <Link
                                 className="hover:text-wine-300"
-                                href="https://donwboulton.com"
+                                to="https://donwboulton.com"
                                 rel="noopener noreferrer"
                                 target="_blank"
                                 aria-describedby="DB Official"
                                 area-label="DB Official"
                               >
                                 <span className="pl-2 text-lg">Official Website</span>
-                              </OutboundLink>
+                              </Link>
                             </span>
                           </div>
                           <div className="mr-2">
@@ -84,16 +84,16 @@ function Contact(props, ref: ContactRef) {
                                   <path fill="#FAFAFA" d="M6 11.5v-6l5 3z" />
                                 </g>
                               </svg>
-                              <OutboundLink
+                              <Link
                                 className="hover:text-wine-300"
-                                href="https://youtube.com/c/donaldboulton"
+                                to="https://youtube.com/c/donaldboulton"
                                 rel="noopener noreferrer"
                                 target="_blank"
                                 aria-describedby="YouTube Channel"
                                 area-label="YouTube Channel"
                               >
                                 <span className="pl-2 text-lg">YouTube Channel</span>
-                              </OutboundLink>
+                              </Link>
                             </span>
                           </div>
                         </ColumnGridTwo>
@@ -109,8 +109,8 @@ function Contact(props, ref: ContactRef) {
                                   <path fill="#FAFAFA" d="M6 11.5v-6l5 3z" />
                                 </g>
                               </svg>
-                              <OutboundLink
-                                href="https://www.youtube.com/@donboulton666"
+                              <Link
+                                to="https://www.youtube.com/@donboulton666"
                                 className="hover:text-wine-300"
                                 rel="noopener noreferrer"
                                 target="_blank"
@@ -118,7 +118,7 @@ function Contact(props, ref: ContactRef) {
                                 area-label="@donboulton666"
                               >
                                 <span className="pl-2">Don's Official</span>
-                              </OutboundLink>
+                              </Link>
                             </span>
                           </div>
                           <div className="mr-2">
@@ -163,8 +163,8 @@ function Contact(props, ref: ContactRef) {
                                   transform="translate(-422.637 -426.196)"
                                 />
                               </svg>
-                              <OutboundLink
-                                href="https://www.instagram.com/donboulton"
+                              <Link
+                                to="https://www.instagram.com/donboulton"
                                 className="hover:text-wine-300"
                                 rel="noopener noreferrer"
                                 target="_blank"
@@ -172,7 +172,7 @@ function Contact(props, ref: ContactRef) {
                                 area-label="DB Instagram"
                               >
                                 <span className="pl-2 text-lg">Instagram</span>
-                              </OutboundLink>
+                              </Link>
                             </span>
                           </div>
                         </ColumnGridTwo>
@@ -190,8 +190,8 @@ function Contact(props, ref: ContactRef) {
                                   d="M516.704 92.677h-65.239c-38.715 0-81.777 16.283-81.777 72.402.189 19.554 0 38.281 0 59.357H324.9v71.271h46.174v205.177h84.847V294.353h56.002l5.067-70.117h-62.531s.14-31.191 0-40.249c0-22.177 23.076-20.907 24.464-20.907 10.981 0 32.332.032 37.813 0V92.677h-.032z"
                                 />
                               </svg>
-                              <OutboundLink
-                                href="https://www.facebook.com/donboulton"
+                              <Link
+                                to="https://www.facebook.com/donboulton"
                                 className="hover:text-wine-300"
                                 rel="noopener noreferrer"
                                 target="_blank"
@@ -199,7 +199,7 @@ function Contact(props, ref: ContactRef) {
                                 area-label="DB Facebook"
                               >
                                 <span className="pl-2 text-lg">Facebook</span>
-                              </OutboundLink>
+                              </Link>
                             </span>
                           </div>
                           <div className="mr-2">
@@ -236,8 +236,8 @@ function Contact(props, ref: ContactRef) {
                                   d="M313.5 106.01c0.01,4.58 1.36,70.83 70.87,74.96 0,19.1 0.02,32.95 0.02,51.18 -5.26,0.3 -45.76,-2.64 -70.97,-25.12l-0.08 99.64c0.96,69.16 -49.93,111.24 -116.46,96.7 -114.71,-34.31 -76.59,-204.44 38.59,-186.24 0,54.93 0.03,-0.01 0.03,54.93 -47.58,-7 -63.5,32.58 -50.85,60.93 11.5,25.8 58.88,31.39 75.41,-5.01 1.87,-7.12 2.8,-15.25 2.8,-24.37l0 -197.85 50.64 0.25z"
                                 />
                               </svg>
-                              <OutboundLink
-                                href="https://www.tiktok.com/@donaldboulton"
+                              <Link
+                                to="https://www.tiktok.com/@donaldboulton"
                                 className="hover:text-wine-300"
                                 rel="noopener noreferrer"
                                 target="_blank"
@@ -245,7 +245,7 @@ function Contact(props, ref: ContactRef) {
                                 area-label="AJ TikTok"
                               >
                                 <span className="pl-2 text-lg">TikTok</span>
-                              </OutboundLink>
+                              </Link>
                             </span>
                           </div>
                         </ColumnGridTwo>
@@ -253,18 +253,18 @@ function Contact(props, ref: ContactRef) {
                     </div>
                     <div className="mb-4 mt-4">
                       <LeftText>
-                        <OutboundLink href="https://donwboulton.com/contact" alt="Buy Me A Coffee">
+                        <Link to="https://donwboulton.com/contact" alt="Buy Me A Coffee">
                           {' '}
                           Donald{' '}
                           <span role="img" aria-label="Trash" className="text-rose-500">
                             😈
                           </span>{' '}
                           Trump
-                        </OutboundLink>
+                        </Link>
                       </LeftText>
                     </div>
                     <div className="mt-4">
-                      <OutboundLink href="https://donwboulton.com/contact" alt="Buy Me A Coffee">
+                      <Link to="https://donwboulton.com/contact" alt="Buy Me A Coffee">
                         <StaticImage
                           className="h-[573px] w-[325px] self-center rounded-lg"
                           src="../../static/images/demon-donald.png"
@@ -273,10 +273,10 @@ function Contact(props, ref: ContactRef) {
                           quality={95}
                           alt="Demon Donald Trump"
                         />
-                      </OutboundLink>
+                      </Link>
                     </div>
                     <div className="mb-6 ml-12 mt-4 flex">
-                      <OutboundLink href="https://www.buymeacoffee.com/donaldboulton/w/3913" alt="Buy Me A Coffee">
+                      <Link to="https://www.buymeacoffee.com/donaldboulton/w/3913" alt="Buy Me A Coffee">
                         <StaticImage
                           className="m-auto mx-auto mb-3 h-16 w-48 rounded-md"
                           formats={['auto', 'webp']}
@@ -285,7 +285,7 @@ function Contact(props, ref: ContactRef) {
                           alt="Buy me a coffee"
                           area-label="Buy me a coffee"
                         />
-                      </OutboundLink>
+                      </Link>
                     </div>
                   </div>
                   <ContactForm />

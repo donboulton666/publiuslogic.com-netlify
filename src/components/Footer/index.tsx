@@ -2,7 +2,6 @@ import * as React from 'react'
 import { StaticImage } from 'gatsby-plugin-image'
 import { Link } from 'gatsby'
 import ColumnGridTwo from '@/components/ColumnGridTwo'
-import { OutboundLink } from 'gatsby-plugin-google-gtag'
 
 export default function Footer() {
   return (
@@ -44,16 +43,16 @@ export default function Footer() {
                           alt="Profile picture"
                           loading="lazy"
                         />
-                        <OutboundLink
+                        <Link
                           className="hover:text-wine-300"
-                          href="https://donwboulton.com"
+                          to="https://donwboulton.com"
                           rel="noopener noreferrer"
                           target="_blank"
                           aria-describedby="DWB Website"
                           area-label="DWB Website"
                         >
                           <span className="pl-2 text-xl">D.W.B's Website</span>
-                        </OutboundLink>
+                        </Link>
                       </span>
                     </div>
                     <div className="mb-2 mr-2">
@@ -67,16 +66,16 @@ export default function Footer() {
                             <path fill="#FAFAFA" d="M6 11.5v-6l5 3z" />
                           </g>
                         </svg>
-                        <OutboundLink
+                        <Link
                           className="hover:text-wine-300"
-                          href="https://www.youtube.com/@donboulton666"
+                          to="https://www.youtube.com/@donboulton666"
                           rel="noopener noreferrer"
                           target="_blank"
                           aria-describedby="YouTube Channel"
                           area-label="YouTube Channel"
                         >
                           <span className="pl-2 text-xl">YouTube Channel</span>
-                        </OutboundLink>
+                        </Link>
                       </span>
                     </div>
                   </ColumnGridTwo>
@@ -111,8 +110,8 @@ export default function Footer() {
                             transform="translate(-422.637 -426.196)"
                           />
                         </svg>
-                        <OutboundLink
-                          href="https://www.instagram.com/donboulton"
+                        <Link
+                          to="https://www.instagram.com/donboulton"
                           className="hover:text-wine-300"
                           rel="noopener noreferrer"
                           target="_blank"
@@ -120,7 +119,7 @@ export default function Footer() {
                           area-label="DB Instagram"
                         >
                           <span className="pl-2 text-xl">DB Instagram</span>
-                        </OutboundLink>
+                        </Link>
                       </span>
                     </div>
                     <div className="mb-2 mr-2">
@@ -134,8 +133,8 @@ export default function Footer() {
                             <path fill="#FAFAFA" d="M6 11.5v-6l5 3z" />
                           </g>
                         </svg>
-                        <OutboundLink
-                          href="https://www.youtube.com/watch?v=G7ceN1JqdUQ&list=PLC06D3D53BA50A744"
+                        <Link
+                          to="https://www.youtube.com/watch?v=G7ceN1JqdUQ&list=PLC06D3D53BA50A744"
                           className="hover:text-wine-300"
                           rel="noopener noreferrer"
                           target="_blank"
@@ -143,7 +142,7 @@ export default function Footer() {
                           area-label="Playlists"
                         >
                           <span className="pl-2 text-xl">Playlists</span>
-                        </OutboundLink>
+                        </Link>
                       </span>
                     </div>
                   </ColumnGridTwo>
@@ -157,8 +156,8 @@ export default function Footer() {
                             d="M516.704 92.677h-65.239c-38.715 0-81.777 16.283-81.777 72.402.189 19.554 0 38.281 0 59.357H324.9v71.271h46.174v205.177h84.847V294.353h56.002l5.067-70.117h-62.531s.14-31.191 0-40.249c0-22.177 23.076-20.907 24.464-20.907 10.981 0 32.332.032 37.813 0V92.677h-.032z"
                           />
                         </svg>
-                        <OutboundLink
-                          href="https://www.facebook.com/profile.php?id=61555130111015"
+                        <Link
+                          to="https://www.facebook.com/profile.php?id=61555130111015"
                           className="hover:text-wine-300"
                           rel="noopener noreferrer"
                           target="_blank"
@@ -166,7 +165,7 @@ export default function Footer() {
                           area-label="DB Facebook"
                         >
                           <span className="pl-2 text-xl">Facebook</span>
-                        </OutboundLink>
+                        </Link>
                       </span>
                     </div>
                     <div className="mr-2">
@@ -203,8 +202,8 @@ export default function Footer() {
                             d="M313.5 106.01c0.01,4.58 1.36,70.83 70.87,74.96 0,19.1 0.02,32.95 0.02,51.18 -5.26,0.3 -45.76,-2.64 -70.97,-25.12l-0.08 99.64c0.96,69.16 -49.93,111.24 -116.46,96.7 -114.71,-34.31 -76.59,-204.44 38.59,-186.24 0,54.93 0.03,-0.01 0.03,54.93 -47.58,-7 -63.5,32.58 -50.85,60.93 11.5,25.8 58.88,31.39 75.41,-5.01 1.87,-7.12 2.8,-15.25 2.8,-24.37l0 -197.85 50.64 0.25z"
                           />
                         </svg>
-                        <OutboundLink
-                          href="https://www.tiktok.com/@donboulton666"
+                        <Link
+                          to="https://www.tiktok.com/@donboulton666"
                           className="hover:text-wine-300"
                           rel="noopener noreferrer"
                           target="_blank"
@@ -212,7 +211,7 @@ export default function Footer() {
                           area-label="AJ TikTok"
                         >
                           <span className="pl-2 text-xl">TikTok</span>
-                        </OutboundLink>
+                        </Link>
                       </span>
                     </div>
                   </ColumnGridTwo>
@@ -284,26 +283,26 @@ export default function Footer() {
                       </Link>
                     </li>
                     <li>
-                      <OutboundLink
+                      <Link
                         className="block pb-2 text-lg font-semibold text-slate-300 hover:text-wine-300"
                         rel="noopener noreferrer"
                         target="_blank"
                         area-label="Github"
-                        href="https://github.com/donboulton666"
+                        to="https://github.com/donboulton666"
                       >
                         Github
-                      </OutboundLink>
+                      </Link>
                     </li>
                     <li>
-                      <OutboundLink
+                      <Link
                         className="block pb-2 text-lg font-semibold text-slate-300 hover:text-wine-300"
                         rel="noopener noreferrer"
                         target="_blank"
                         area-label="Gatsby Starter Basic Instructions"
-                        href="https://github.com/donaldboulton/gatsby-starter-basic-instructions"
+                        to="https://github.com/donaldboulton/gatsby-starter-basic-instructions"
                       >
                         Free Starters
-                      </OutboundLink>
+                      </Link>
                     </li>
                     <li>
                       <Link
@@ -333,15 +332,15 @@ export default function Footer() {
             <div className="mx-auto w-full px-4 text-center md:w-4/12">
               <div className="py-1 text-lg font-semibold text-slate-300">
                 © 2023 Publiuslogic by{' '}
-                <OutboundLink
-                  href="https://donwboulton.com"
+                <Link
+                  to="https://donwboulton.com"
                   rel="noopener noreferrer"
                   target="_blank"
                   area-label="Donald Boulton Visualizer's Web Site"
                   className="text-slate-300 hover:text-wine-300"
                 >
                   Visualizer
-                </OutboundLink>
+                </Link>
               </div>
             </div>
           </div>

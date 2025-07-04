@@ -1417,17 +1417,17 @@
   resolved "https://registry.yarnpkg.com/@floating-ui/utils/-/utils-0.2.10.tgz#a2a1e3812d14525f725d011a73eceb41fef5bc1c"
   integrity sha512-aGTxbpbg8/b5JfU1HXSrbH3wXZuLPJcNEcZQFMxLs3oSzgtVu6nFPkbbGGUvBcUjKV2YyB9Wxxabo+HEH9tcRQ==
 
-"@fontsource/eb-garamond@^5.1.1":
+"@fontsource/eb-garamond@^5.2.6":
   version "5.2.6"
   resolved "https://registry.yarnpkg.com/@fontsource/eb-garamond/-/eb-garamond-5.2.6.tgz#a3690b0213e65e80083e08f8782c25e40d79c7ee"
   integrity sha512-tyfij001YUzGAdIVxWSmID5zlR6PUzMUDm4GjwDlfBEtlS+slyypAmtkM7x4oG1mS0n9pqFbQW+WlmNm1UVJQA==
 
-"@fontsource/inter@^5.1.0":
+"@fontsource/inter@^5.2.6":
   version "5.2.6"
   resolved "https://registry.yarnpkg.com/@fontsource/inter/-/inter-5.2.6.tgz#2c705ea57d7af283a05bb1ca59fb0f06fc5de3be"
   integrity sha512-CZs9S1CrjD0jPwsNy9W6j0BhsmRSQrgwlTNkgQXTsAeDRM42LBRLo3eo9gCzfH4GvV7zpyf78Ozfl773826csw==
 
-"@fontsource/sacramento@^5.1.0":
+"@fontsource/sacramento@^5.2.6":
   version "5.2.6"
   resolved "https://registry.yarnpkg.com/@fontsource/sacramento/-/sacramento-5.2.6.tgz#43afa828d0babb35b5ddb95aad4a7f7fc4390a42"
   integrity sha512-1AdcAwF5WV2/fQE9IGfCjsQy8PI/I7DhaeRv+Ug1XYfSmUjPo1zYaSQAO1O4NtBdp0x+aM+qEzRb4wI7EnWpAA==
@@ -8533,14 +8533,6 @@ gatsby-plugin-eslint@^4.0.4:
   dependencies:
     webpack-merge "^5.8.0"
 
-gatsby-plugin-google-gtag@^5.14.0:
-  version "5.14.0"
-  resolved "https://registry.yarnpkg.com/gatsby-plugin-google-gtag/-/gatsby-plugin-google-gtag-5.14.0.tgz#89f520481e20cc0830a52334f7f19d08be547d11"
-  integrity sha512-iXBQR4xjU20vR1b0zSE1McDxJZdm3pNxm8FMSvFIa9IswZskRgnjSYUBjGLMeGf8+t8y8rSTie94Ni0pJqf6dA==
-  dependencies:
-    "@babel/runtime" "^7.20.13"
-    minimatch "^3.1.2"
-
 gatsby-plugin-image@3.14.0:
   version "3.14.0"
   resolved "https://registry.yarnpkg.com/gatsby-plugin-image/-/gatsby-plugin-image-3.14.0.tgz#a5a67be6cd460effa0ea70a4fdcdd8baa4a0c380"
@@ -13841,7 +13833,7 @@ prettier@3.4.2:
   resolved "https://registry.yarnpkg.com/prettier/-/prettier-3.4.2.tgz#a5ce1fb522a588bf2b78ca44c6e6fe5aa5a2b13f"
   integrity sha512-e9MewbtFo+Fevyuxn/4rrcDAaq0IYxPGLvObpQjiZBMAzB9IGmzlnG9RZy3FFas+eBMu2vA0CszMeduow5dIuQ==
 
-prettier@^3.4.2:
+prettier@^3.6.2:
   version "3.6.2"
   resolved "https://registry.yarnpkg.com/prettier/-/prettier-3.6.2.tgz#ccda02a1003ebbb2bfda6f83a074978f608b9393"
   integrity sha512-I7AIg5boAr5R0FFtJ6rCfD+LFsWHp81dolrFD8S79U9tb8Az2nGrJncnMSnys+bpQJfRUzqs9hnA81OAA3hCuQ==

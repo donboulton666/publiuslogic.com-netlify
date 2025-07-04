@@ -2,7 +2,7 @@ import * as React from 'react'
 import { StaticImage } from 'gatsby-plugin-image'
 import { useNetlifyForm, NetlifyFormProvider, NetlifyFormComponent, Honeypot, Recaptcha } from 'react-netlify-forms'
 import { useForm, Resolver } from 'react-hook-form'
-import { OutboundLink } from 'gatsby-plugin-google-gtag'
+import { Link } from 'gatsby'
 
 type FormValues = {
   firstName: string
@@ -360,8 +360,8 @@ export default function ContactForm() {
               </div>
               <div className="float-right mr-8 mt-4">
                 <span className="md:ml-10">
-                  <OutboundLink
-                    href="https://netlify.com/"
+                  <Link
+                    to="https://netlify.com/"
                     className="inline-flex"
                     target="_blank"
                     rel="noopener noreferrer"
@@ -392,11 +392,11 @@ export default function ContactForm() {
                       />
                     </svg>
                     <span className="ml-1 mt-2 text-slate-900 dark:text-slate-300">Netlify</span>
-                  </OutboundLink>
+                  </Link>
                 </span>
                 <span className="ml-2">
-                  <OutboundLink
-                    href="https://react-hook-form.com/"
+                  <Link
+                    to="https://react-hook-form.com/"
                     className="inline-flex"
                     target="_blank"
                     rel="noopener noreferrer"
@@ -413,7 +413,7 @@ export default function ContactForm() {
                       loading="eager"
                     />
                     <span className="ml-1 mt-2 text-slate-900 dark:text-slate-300">React Hook Forms</span>
-                  </OutboundLink>
+                  </Link>
                 </span>
               </div>
             </div>

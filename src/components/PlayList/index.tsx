@@ -1,10 +1,10 @@
 import * as React from 'react'
-import { OutboundLink } from 'gatsby-plugin-google-gtag'
+import { Link } from 'gatsby'
 
 const PlayList = () => {
   return (
-    <OutboundLink
-      href="https://open.spotify.com/playlist/2e8gSRRM6gKyOARqywHHTI"
+    <Link
+      to="https://open.spotify.com/playlist/2e8gSRRM6gKyOARqywHHTI"
       rel="noopener noreferrer"
       target="_blank"
       area-label="Spotify Playlist"
@@ -20,7 +20,7 @@ const PlayList = () => {
           <span className="ml-2 font-medium">Spotify</span>
         </div>
       </div>
-    </OutboundLink>
+    </Link>
   )
 }
 

@@ -1,7 +1,6 @@
 import * as React from 'react'
 import { ReactNode } from 'react'
 import { Link } from 'gatsby'
-import { OutboundLink } from 'gatsby-plugin-google-gtag'
 
 interface AProps {
   href: string
@@ -13,16 +12,16 @@ interface AProps {
 export default function A({ href, external = false, className, children }: AProps) {
   if (external) {
     return (
-      <OutboundLink
+      <Link
         key={href}
-        href={href}
+        to={href}
         className={`text-slate-200 hover:text-wine-300 dark:text-slate-200 ${className}`}
         rel="me"
         target="_blank"
         area-label="Social Link"
       >
         {children}
-      </OutboundLink>
+      </Link>
     )
   } else {
     return (

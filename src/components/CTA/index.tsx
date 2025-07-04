@@ -1,6 +1,6 @@
 import * as React from 'react'
 import Section from '@/components/Section'
-import { OutboundLink } from 'gatsby-plugin-google-gtag'
+import { Link } from 'gatsby'
 
 export default function CTA() {
   return (
@@ -12,20 +12,20 @@ export default function CTA() {
         </h2>
         <div className="mt-8 flex lg:mt-0 lg:flex-shrink-0">
           <div className="inline-flex rounded-md shadow">
-            <OutboundLink
-              href="https://github.com/donaldboulton/publiuslogic.com/generate"
+            <Link
+              to="https://github.com/donaldboulton/publiuslogic.com/generate"
               className="inline-flex items-center justify-center rounded-md border border-transparent bg-slate-900 px-4 py-3 text-base font-medium text-slate-300 hover:bg-slate-950"
             >
               Use Template
-            </OutboundLink>
+            </Link>
           </div>
           <div className="ml-3 inline-flex rounded-md shadow">
-            <OutboundLink
-              href="https://github.com/donaldboulton/publiuslogic.com"
+            <Link
+              to="https://github.com/donaldboulton/publiuslogic.com"
               className="inline-flex items-center justify-center rounded-md border border-transparent bg-slate-900 px-4 py-3 text-base font-medium text-slate-300 hover:bg-slate-950"
             >
               Github Repo
-            </OutboundLink>
+            </Link>
           </div>
         </div>
       </div>

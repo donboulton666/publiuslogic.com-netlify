@@ -1,6 +1,6 @@
 import * as React from 'react'
 import { ReactNode, FC } from 'react'
-import { OutboundLink } from 'gatsby-plugin-google-gtag'
+import { Link } from 'gatsby'
 
 interface UserProfileProps {
   children: ReactNode
@@ -21,21 +21,21 @@ const UserProfile: FC<UserProfileProps> = (props) => {
           <div className="space-y-1 text-center sm:text-left">
             <div className="space-y-0.5">
               <div className="text-black text-lg font-semibold">
-                <OutboundLink href={link} target="_blank" rel="noopener noreferrer" aria-describedby={description}>
+                <Link to={link} target="_blank" rel="noopener noreferrer" aria-describedby={description}>
                   {description}
-                </OutboundLink>
+                </Link>
               </div>
               <div className="font-medium text-slate-500">
-                <OutboundLink href={titleLink} target="_blank" rel="noopener noreferrer" aria-describedby={title}>
+                <Link to={titleLink} target="_blank" rel="noopener noreferrer" aria-describedby={title}>
                   {title}
-                </OutboundLink>
+                </Link>
               </div>
             </div>
-            <OutboundLink href={buttonLink} target="_blank" rel="noopener noreferrer" aria-describedby="Contact">
+            <Link to={buttonLink} target="_blank" rel="noopener noreferrer" aria-describedby="Contact">
               <button className="rounded-full border border-purple-200 px-4 py-1 text-sm font-semibold text-purple-600 hover:border-transparent hover:bg-purple-600 hover:text-slate-300 focus:outline-none focus:ring-2 focus:ring-purple-600 focus:ring-offset-2">
                 Contact
               </button>
-            </OutboundLink>
+            </Link>
           </div>
         </div>
       </div>

@@ -17,7 +17,6 @@ import {
   TableCellsIcon,
   ArrowTopRightOnSquareIcon,
 } from '@heroicons/react/24/outline'
-import { OutboundLink } from 'gatsby-plugin-google-gtag'
 
 const godNavigation = [
   { name: 'Creation of All', href: '/blog/creation-of-all', current: false },
@@ -203,12 +202,12 @@ export default function Header() {
             </SubMenu>
             <MenuDivider />
             <MenuItem>
-              <OutboundLink href="https://bibwoe.com/posts/enoch-preface" target="_blank" aria-label="Enoch">
+              <Link to="https://bibwoe.com/posts/enoch-preface" target="_blank" aria-label="Enoch">
                 <span className="flex items-center">
                   Book Of Enoch{' '}
                   <ArrowTopRightOnSquareIcon className="h-7 w-8 pl-2 text-blue-500 text-opacity-75 hover:text-blue-600 dark:text-blue-500 dark:hover:text-blue-600" />
                 </span>
-              </OutboundLink>
+              </Link>
             </MenuItem>
           </SubMenu>
           <MenuItem>

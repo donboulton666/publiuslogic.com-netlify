@@ -4,7 +4,7 @@ import GatsbyImage from '../../../static/svg/undraw/undraw_gatsbyjs_st4g.svg'
 import TailwindImage from '../../../static/svg/undraw/undraw_tailwind_css_1egw.svg'
 import ReactImage from '../../../static/svg/undraw/undraw_react_y-7-wq.svg'
 import WavyHr from '@/components/WavyHr'
-import { OutboundLink } from 'gatsby-plugin-google-gtag'
+import { Link } from 'gatsby'
 
 const callouts = [
   {
@@ -48,16 +48,16 @@ export default function FindOutMore() {
                   />
                 </div>
                 <h3 className="mt-6 text-2xl">
-                  <OutboundLink
+                  <Link
                     className="text-indigo-500 hover:text-indigo-600"
-                    href={callout.href}
+                    to={callout.href}
                     rel="noopener noreferrer"
                     target="_blank"
                     area-label="Find Out More"
                   >
                     <span className="absolute inset-0" />
                     {callout.name}
-                  </OutboundLink>
+                  </Link>
                 </h3>
                 <div className="text-base">{callout.description}</div>
               </div>

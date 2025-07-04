@@ -30,7 +30,7 @@ export function onRenderBody({ setHtmlAttributes, setHeadComponents, setPreBodyC
       Access-Control-Allow-Origin="https://www.googletagmanager.com/" 
       src={`${ORIGIN}/gtag/js?id=${GATSBY_GA_MEASUREMENT_ID}`} />,
     <script
-      key="gtag"
+      key="gtm"
       type="text/partytown"
       dangerouslySetInnerHTML={{
         __html: `window.dataLayer = window.dataLayer || [];

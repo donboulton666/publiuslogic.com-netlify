@@ -3,7 +3,7 @@ import { StaticImage } from 'gatsby-plugin-image'
 import clsx from 'clsx'
 import { Menu, MenuItem, MenuItems, MenuButton, Transition } from '@headlessui/react'
 import { MusicalNoteIcon } from '@heroicons/react/24/outline'
-import { OutboundLink } from 'gatsby-plugin-google-gtag'
+import { Link } from 'gatsby'
 
 const Stacked = () => {
   return (
@@ -65,9 +65,9 @@ const Stacked = () => {
           <MenuItems className="ring-black absolute right-0 mt-3 w-48 origin-top-right rounded-md bg-slate-900 py-1 text-slate-200 opacity-75 shadow-lg ring-1 ring-opacity-5 hover:opacity-100 focus:outline-none">
             <MenuItem>
               {({ active }) => (
-                <OutboundLink
+                <Link
                   aria-label="Login"
-                  href="/login"
+                  to="/login"
                   className={clsx(
                     active ? 'bg-slate-700' : '',
                     'ml-2 mr-2 block rounded-md px-3 py-2 text-lg font-medium hover:bg-slate-600/30 hover:text-slate-300'
@@ -81,14 +81,14 @@ const Stacked = () => {
                     />
                     <span>Old Enough</span>
                   </span>
-                </OutboundLink>
+                </Link>
               )}
             </MenuItem>
             <MenuItem>
               {({ active }) => (
-                <OutboundLink
+                <Link
                   aria-label="Old Enough"
-                  href="/old-enough"
+                  to="/old-enough"
                   className={clsx(
                     active ? 'bg-slate-700' : '',
                     'ml-2 mr-2 block rounded-md px-3 py-2 text-lg font-medium hover:bg-slate-600/30 hover:text-slate-300'
@@ -98,13 +98,13 @@ const Stacked = () => {
                     <MusicalNoteIcon className="block h-8 w-8 pr-2 text-purple-500" aria-hidden="true" />
                     <span>Profile</span>
                   </span>
-                </OutboundLink>
+                </Link>
               )}
             </MenuItem>
             <MenuItem>
               {({ active }) => (
-                <OutboundLink
-                  href="/profile"
+                <Link
+                  to="/profile"
                   aria-label="Profile Button"
                   className={clsx(
                     active ? 'bg-slate-700' : '',
@@ -115,7 +115,7 @@ const Stacked = () => {
                     <MusicalNoteIcon className="block h-8 w-8 pr-2 text-purple-500" aria-hidden="true" />
                     <span>Profile</span>
                   </span>
-                </OutboundLink>
+                </Link>
               )}
             </MenuItem>
           </MenuItems>
