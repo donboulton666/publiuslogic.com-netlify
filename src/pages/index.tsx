@@ -625,6 +625,7 @@ export function Head(props: HeadProps) {
       </script>
       <title>Home</title>
       <meta name="description" content="PubliusLogic Home Page." />
+      <meta name="google-site-verification" content="TBy6fQlD-eS-XhHzIY5dA1tfhtTuzH_m8Woldp3_Q84" />
       <link rel="sitemap" type="application/xml" title="Sitemap" href="/sitemap.xml" />
     </>
   )
