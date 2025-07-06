@@ -75,6 +75,9 @@ const Layout = ({ children }: LayoutProps) => {
                 Privacy Policy
               </Link>
               , and to receive periodic emails with updates.
+              <div>
+                <button onClick="consentGrantedAdStorage()">Yes</button>
+              </div>
             </div>
           </div>
         </span>

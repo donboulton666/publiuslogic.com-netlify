@@ -331,7 +331,7 @@ export default function Footer() {
           <div className="flex flex-wrap items-center justify-center md:justify-between">
             <div className="mx-auto w-full px-4 text-center md:w-4/12">
               <div className="py-1 text-lg font-semibold text-slate-300">
-                © 2023 Publiuslogic by{' '}
+                © 2025 Publiuslogic by{' '}
                 <Link
                   to="https://donwboulton.com"
                   rel="noopener noreferrer"
