@@ -268,7 +268,13 @@ const config: GatsbyConfig = {
         workboxConfig: {
           globPatterns: ['**/icon-path*'],
         },
-        precachePages: ['/', '/about', '/contact', '/blog/*', '/privacy', '/thanks', '/tags'],
+        precachePages: ['/', '/about', '/blog/*', '/privacy', '/thanks'],
+      },
+    },
+    {
+      resolve: "gatsby-plugin-webpack-bundle-analyser-v2",
+      options: {
+        defaultSizes: "gzip"
       },
     },
   ],
