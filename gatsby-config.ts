@@ -243,7 +243,7 @@ const config: GatsbyConfig = {
         appId: process.env.GATSBY_ALGOLIA_APP_ID,
         apiKey: process.env.ALGOLIA_ADMIN_KEY,
         indexName: process.env.GATSBY_ALGOLIA_INDEX_NAME,
-        queries: require("./src/utils/algolia-queries"),
+        queries: require('./src/utils/algolia-queries'),
         chunkSize: 1000,
         skipIndexing: false,
         enablePartialUpdates: true,
@@ -266,17 +266,9 @@ const config: GatsbyConfig = {
       resolve: 'gatsby-plugin-offline',
       options: {
         workboxConfig: {
-          globPatterns: ['**/icon-path*']
+          globPatterns: ['**/icon-path*'],
         },
-        precachePages: [
-          '/',
-          '/about',
-          '/contact',
-          '/blog/*',
-          '/privacy',
-          '/thanks',
-          '/tags',
-        ],
+        precachePages: ['/', '/about', '/contact', '/blog/*', '/privacy', '/thanks', '/tags'],
       },
     },
   ],

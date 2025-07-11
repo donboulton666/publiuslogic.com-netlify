@@ -5,7 +5,7 @@ interface ColumnGridTwoProps {
   children?: ReactNode
 }
 
-const ColumnGridTwo: FC<ColumnGridTwoProps> = props => {
+const ColumnGridTwo: FC<ColumnGridTwoProps> = (props) => {
   const { children } = props
   return (
     <>

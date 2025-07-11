@@ -24,11 +24,12 @@ export function onRenderBody({ setHtmlAttributes, setHeadComponents, setPreBodyC
   setHtmlAttributes({ lang: 'en' })
   setHeadComponents([
     <Partytown key="partytown" forward={['gtag', 'dataLayer.push']} />,
-    <script 
-      key="google-analytics" 
+    <script
+      key="google-analytics"
       type="text/partytown"
-      Access-Control-Allow-Origin="https://www.googletagmanager.com/" 
-      src={`${ORIGIN}/gtag/js?id=${GATSBY_GA_MEASUREMENT_ID}`} />,
+      Access-Control-Allow-Origin="https://www.googletagmanager.com/"
+      src={`${ORIGIN}/gtag/js?id=${GATSBY_GA_MEASUREMENT_ID}`}
+    />,
     <script
       key="gtag"
       type="text/partytown"

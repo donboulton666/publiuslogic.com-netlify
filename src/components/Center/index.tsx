@@ -5,7 +5,7 @@ interface CenterProps {
   children?: ReactNode
 }
 
-const Center: FC<CenterProps> = props => {
+const Center: FC<CenterProps> = (props) => {
   const { children, ...delegated } = props
 
   return (

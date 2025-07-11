@@ -5,7 +5,7 @@ interface ColumnGridThreeProps {
   children?: ReactNode
 }
 
-const ColumnGridThree: FC<ColumnGridThreeProps> = props => {
+const ColumnGridThree: FC<ColumnGridThreeProps> = (props) => {
   const { children } = props
   return (
     <>

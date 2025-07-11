@@ -38,7 +38,7 @@ const WavyHr = () => {
             transition={{ duration: 0.8, ease: 'easeOut' }}
             className="mb-2 mt-2 text-center text-transparent"
           >
-            <hr className='text-center mx-auto text-zinc-200' />
+            <hr className="mx-auto text-center text-zinc-200" />
           </m.div>
         </m.section>
       </LazyMotion>

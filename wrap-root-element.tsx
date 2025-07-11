@@ -51,7 +51,8 @@ const Acronym = (props) => <abbr style={{ color: '#8b5cf6' }} {...props} />
 const components = {
   abbr: Acronym,
   A: A,
-  BoldText, BoldText,
+  BoldText,
+  BoldText,
   Box: Box,
   FindOutMore: FindOutMore,
   Center: Center,

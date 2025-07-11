@@ -5,7 +5,7 @@ interface IframeWrapperProps {
   children?: ReactNode
 }
 
-const IframeWrapper: FC<IframeWrapperProps> = props => {
+const IframeWrapper: FC<IframeWrapperProps> = (props) => {
   const { children, ...delegated } = props
   return (
     <>

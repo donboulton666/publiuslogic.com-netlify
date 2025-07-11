@@ -4,9 +4,9 @@ import { AdvancedVideo, lazyload } from '@cloudinary/react'
 // @ts-ignore
 import { Cloudinary } from '@cloudinary/url-gen'
 // @ts-ignore
-import { scale } from "@cloudinary/url-gen/actions/resize";
+import { scale } from '@cloudinary/url-gen/actions/resize'
 // @ts-ignore
-import { max } from "@cloudinary/url-gen/actions/roundCorners";
+import { max } from '@cloudinary/url-gen/actions/roundCorners'
 // @ts-ignore
 import { videoCodec } from '@cloudinary/url-gen/actions/transcode'
 // @ts-ignore
@@ -17,8 +17,8 @@ const VideoFive = () => {
   const videoEl = useRef(null)
   const cld = new Cloudinary({
     cloud: {
-      cloudName: 'mansbooks'
-    }
+      cloudName: 'mansbooks',
+    },
   })
 
   const sources = [
@@ -35,9 +35,7 @@ const VideoFive = () => {
   ]
 
   const myVideo = cld.video('videos/true-jew')
-   myVideo
-     .resize(scale().width(600))
-     .roundCorners(max());
+  myVideo.resize(scale().width(600)).roundCorners(max())
 
   return (
     <>

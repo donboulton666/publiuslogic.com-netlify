@@ -2,7 +2,7 @@ import * as React from 'react'
 import { useRef, forwardRef, FC } from 'react'
 import type { HeadProps } from 'gatsby'
 import { graphql } from 'gatsby'
-import { IGatsbyImageData } from "gatsby-plugin-image";
+import { IGatsbyImageData } from 'gatsby-plugin-image'
 import { MDXRenderer } from 'gatsby-plugin-mdx'
 import Layout from '@/components/Layout'
 import PageTransition from '@/components/PageTransition'

@@ -1,9 +1,9 @@
 import * as React from 'react'
 import { FC } from 'react'
-import { Html, Button } from "@react-email/components";
+import { Html, Button } from '@react-email/components'
 
 interface EmailProps {
-  url: string;
+  url: string
 }
 
 const Email: FC<EmailProps> = (props) => {
@@ -12,7 +12,7 @@ const Email: FC<EmailProps> = (props) => {
     <Html lang="en">
       <Button href={url}>Click me</Button>
     </Html>
-  );
-};
+  )
+}
 
 export default Email

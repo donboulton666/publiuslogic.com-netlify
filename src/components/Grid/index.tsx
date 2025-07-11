@@ -5,7 +5,7 @@ interface GridProps {
   children?: ReactNode
 }
 
-const Grid: FC<GridProps> = props => {
+const Grid: FC<GridProps> = (props) => {
   const { children } = props
   return (
     <>

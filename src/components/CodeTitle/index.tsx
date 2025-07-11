@@ -7,7 +7,7 @@ interface TitleProps {
   className: string
 }
 
-const Title: FC<TitleProps> = props => {
+const Title: FC<TitleProps> = (props) => {
   const { children, text, className } = props
 
   return (

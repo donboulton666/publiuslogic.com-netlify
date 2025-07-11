@@ -4,7 +4,7 @@ import '@fontsource/inter'
 import './src/styles/global.css'
 import { wrapRootElement as wrap } from './wrap-root-element'
 import { AnimatePresence } from 'framer-motion'
-import { gtag, initDataLayer, install } from 'ga-gtag';
+import { gtag, initDataLayer, install } from 'ga-gtag'
 
 export function wrapPageElement({ element }) {
   const onExitComplete = () => {
@@ -53,8 +53,13 @@ export const onRouteUpdate = ({ location }) => {
   const pagePath = location ? location.pathname + location.search + location.hash : undefined
   setTimeout(() => {
     if (typeof gtag === 'function') {
-      initDataLayer();
-      install('GTM-WLCMLLP', { send_page_view: true, optimize_id: "G-LGV204F0PT", anonymize_ip: true, cookie_expires: 0, });
+      initDataLayer()
+      install('GTM-WLCMLLP', {
+        send_page_view: true,
+        optimize_id: 'G-LGV204F0PT',
+        anonymize_ip: true,
+        cookie_expires: 0,
+      })
       gtag('event', 'page_view', 'gatsby-route-change', { page_path: pagePath })
     }
   }, 100)

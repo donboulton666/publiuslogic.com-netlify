@@ -6,7 +6,6 @@ interface LeftProps {
 }
 
 const Left = ({ children, ...delegated }: LeftProps) => {
-
   return (
     <>
       <div className="justify-left flex items-stretch" {...delegated}>

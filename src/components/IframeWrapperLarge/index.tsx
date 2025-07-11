@@ -5,7 +5,7 @@ interface IframeWrapperLargeProps {
   children?: ReactNode
 }
 
-const IframeWrapperLarge: FC<IframeWrapperLargeProps> = props => {
+const IframeWrapperLarge: FC<IframeWrapperLargeProps> = (props) => {
   const { children, ...delegated } = props
 
   return (

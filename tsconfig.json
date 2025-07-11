@@ -20,7 +20,7 @@
     "baseUrl": "./src",
     "paths": {
       "@/*": ["./*"],
-      "react": [ "./node_modules/@types/react" ]
+      "react": ["./node_modules/@types/react"]
     }
   }
 }

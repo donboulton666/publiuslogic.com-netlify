@@ -1,15 +1,15 @@
 const indexName = `Posts`
 const crypto = require('crypto')
 
-interface postToAlgoliaRecordProps {    
-    node:{
-      data: any
-      id: String
-      path: String 
-      frontmatter: String 
-      fields: String
-      item: String
-    }
+interface postToAlgoliaRecordProps {
+  node: {
+    data: any
+    id: String
+    path: String
+    frontmatter: String
+    fields: String
+    item: String
+  }
 }
 
 const postQuery = `{
@@ -37,7 +37,9 @@ const postQuery = `{
     }
   }`
 
-export default function postToAlgoliaRecord({ node: { id, data, path, frontmatter, fields, item, ...rest } }: postToAlgoliaRecordProps) {
+export default function postToAlgoliaRecord({
+  node: { id, data, path, frontmatter, fields, item, ...rest },
+}: postToAlgoliaRecordProps) {
   return {
     objectID: id,
     ...frontmatter,
@@ -48,10 +50,7 @@ export default function postToAlgoliaRecord({ node: { id, data, path, frontmatte
 
 function transformer(data: { internal: any }[]) {
   return data.map((item: { internal: any }) => {
-    const hash = crypto
-      .createHash('md5')
-      .update(JSON.stringify(item))
-      .digest('hex');
+    const hash = crypto.createHash('md5').update(JSON.stringify(item)).digest('hex')
 
     return {
       ...item,
@@ -59,8 +58,8 @@ function transformer(data: { internal: any }[]) {
         ...item.internal,
         contentDigest: hash,
       },
-    };
-  });
+    }
+  })
 }
 
 const queries = [
